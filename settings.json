@@ -1,0 +1,309 @@
+{
+  "workbench.colorTheme": "Default Dark+",
+  "workbench.iconTheme": "vscode-icons",
+  "editor.mouseWheelZoom": true,
+  "editor.smoothScrolling": true,
+  "editor.fontSize": 19.5,
+  "editor.cursorWidth": 3,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active",
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "breadcrumbs.enabled": false,
+  "editor.cursorBlinking": "expand",
+  "editor.overviewRulerBorder": false,
+  "editor.hideCursorInOverviewRuler": true,
+  "workbench.sideBar.location": "right",
+  "editor.minimap.enabled": false,
+  "extensions.autoUpdate": "onlyEnabledExtensions",
+  "editor.parameterHints.cycle": true,
+  "workbench.editor.untitled.hint": "hidden",
+  "editor.scrollbar.horizontal": "hidden",
+  "workbench.startupEditor": "none",
+  "search.searchOnType": false,
+  "window.titleBarStyle": "custom",
+  "window.title": " ",
+  "workbench.tree.indent": 20,
+  "explorer.compactFolders": false,
+  "editor.lineNumbers": "relative",
+  "window.menuBarVisibility": "compact",
+  "workbench.layoutControl.enabled": false,
+  "errorLens.fontWeight": "400",
+  "json.format.keepLines": true,
+  // Hide and exclude files
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.factorypath": true,
+    "**/.project": true,
+    "**/.settings": true
+  },
+  "editor.unicodeHighlight.allowedLocales": {
+    "cs": true
+  },
+  "activitusbar.inactiveColour": "#569CD6",
+  "activitusbar.activeColour": "#569CD6",
+  //! python
+  "python.analysis.autoImportCompletions": true,
+  "python.formatting.provider": "black",
+  // "python.languageServer": "Default",
+  //! QuickFix settings
+  "editor.quickSuggestions": {
+    "comments": "inline",
+    "strings": "on",
+    "other": "on"
+  },
+  "editor.wordBasedSuggestions": false,
+  "editor.parameterHints.enabled": false,
+  //! Code runner
+  "code-runner.clearPreviousOutput": true,
+  "code-runner.ignoreSelection": true,
+  "code-runner.saveAllFilesBeforeRun": true,
+  "code-runner.saveFileBeforeRun": true,
+  "code-runner.fileDirectoryAsCwd": true,
+  "code-runner.showExecutionMessage": false,
+  //! Terminal settings
+  "terminal.integrated.profiles.windows": {
+    "Cmder": {
+      "path": [ "C:\\Windows\\System32\\cmd.exe" ],
+      "args": [ "/k", "C:\\Users\\Acer\\cmder\\vendor\\init.bat" ]
+    },
+    "MyPowerShell": {
+      "path": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+      "args": [ "-NoLogo" ]
+    },
+  },
+  "terminal.integrated.gpuAcceleration": "off",
+  "terminal.integrated.fontSize": 17,
+  "terminal.integrated.fontWeight": "normal",
+  "terminal.integrated.lineHeight": 1.6,
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "debug.terminal.clearBeforeReusing": true,
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "terminal-in-status-bar.statusBarPriority": 10000,
+  //! Dart settings
+  "[dart]": {
+    "editor.codeActionsOnSave": {
+      "quickfix.add.required": true,
+      "quickfix.add.required.multi": true,
+      "quickfix.create.constructorForFinalFields": true,
+      "quickfix.create.constructorForFinalFields.multi": true,
+      "source.organizeImports": true,
+    },
+    "editor.rulers": [
+      // 80
+    ],
+    "editor.selectionHighlight": false,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.suggestSelection": "first",
+    "editor.tabCompletion": "off",
+    "editor.wordBasedSuggestions": false,
+    // show suggestons when start to type (solve enter problem)
+    "editor.suggestOnTriggerCharacters": false,
+  },
+  "dart.debugExternalPackageLibraries": true,
+  "dart.debugSdkLibraries": true,
+  //! Flutter Settings
+  // Guide lines (tree widget)
+  "dart.previewFlutterUiGuides": true,
+  // Nest files in Flutter projects
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
+  "explorer.fileNesting.patterns": {
+    "pubspec.yaml": ".flutter-plugins, .packages, .dart_tool, .flutter-plugins-dependencies, .metadata, .packages, pubspec.lock, build.yaml, analysis_options.yaml, all_lint_rules.yaml",
+    ".gitignore": ".gitattributes, .gitmodules, .gitmessage, .mailmap, .git-blame*",
+    "readme.*": "authors, backers.md, changelog*, citation*, code_of_conduct.md, codeowners, contributing.md, contributors, copying, credits, governance.md, history.md, license*, maintainers, readme*, security.md, sponsors.md",
+    "*.dart": "$(capture).g.dart, $(capture).freezed.dart",
+  },
+  // Add Const Automatically
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true,
+    "source.fixAll": true,
+  },
+  "dart_data_class_generator.useEquatable": true,
+  //! vim Settings
+  "vim.leader": "<space>",
+  "vim.smartcase": true,
+  "vim.foldfix": true,
+  "vim.useSystemClipboard": true,
+  "vim.highlightedyank.enable": true,
+  "vim.hlsearch": true,
+  "vim.handleKeys": {
+    // VS Code search in file
+    "<C-f>": false,
+    // VS Code new marker @ next occurence
+    "<C-d>": false,
+    // Copy
+    "<C-c>": false,
+    // Cut
+    "<C-x>": false,
+    // Paste
+    "<C-v>": false,
+    // Undo
+    "<C-z>": false,
+    // Redo
+    "<C-y>": false,
+    "//": false
+  },
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // Fix undo ( ctrl+z )
+    {
+      "before": [ "u" ],
+      "after": [ ],
+      "commands": [ { "command": "undo", "args": [ ] } ],
+    },
+    {
+      "before": [ "<C-r>" ],
+      "after": [ ],
+      "commands": [ { "command": "redo", "args": [ ] } ]
+    },
+    // Cut(delete) without update register
+    {
+      "before": [ "<leader>", "d" ],
+      "after": [ "\"", "_", "d" ],
+    },
+    // Cut(delete) without update register
+    {
+      "before": [ "<leader>", "x" ],
+      "after": [ "\"", "_", "x" ],
+    },
+    // Which key
+    {
+      "before": [ "<leader>", "<leader>" ],
+      "commands": [ "whichkey.show" ]
+    },
+    // Go to error
+    {
+      "before": [ "g", "e" ],
+      "commands": [ "editor.action.marker.nextInFiles" ]
+    },
+    // Save file
+    {
+      "before": [ "<leader>", "s" ],
+      "commands": [ "workbench.action.files.save" ]
+    },
+    // Splits
+    {
+      "before": [ "leader", "v" ],
+      "commands": [ ":vsplit" ]
+    },
+    {
+      "before": [ "leader", "h" ],
+      "commands": [ ":split" ]
+    },
+    // Show Hover
+    {
+      "before": [ "g", "h" ],
+      "commands": [ "editor.action.showDefinitionPreviewHover" ]
+    },
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    // Put(paste) last thing yanked, not deleted == P
+    {
+      "before": [ "<leader>", "p" ],
+      "after": [ "\"", "0", "p" ],
+    },
+    // Cut(delete) without update register
+    {
+      "before": [ "<leader>", "d" ],
+      "after": [ "\"", "_", "d" ],
+    },
+    // Which key
+    {
+      "before": [ "<leader>", "<leader>" ],
+      "commands": [ "whichkey.show" ]
+    },
+    // Move selected lines while staying in visual mode
+    {
+      "before": [ "J" ],
+      "commands": [ "editor.action.moveLinesDownAction" ]
+    },
+    { "before": [ "K" ],
+      "commands": [ "editor.action.moveLinesUpAction" ]
+    },
+    // Comment
+    {
+      "before": [ "/" ],
+      "commands": [ "editor.action.commentLine" ]
+    },
+  ],
+  "vim.insertModeKeyBindings": [
+    // Put semicolon to the end of line
+    {
+      "before": [ ";", ";" ],
+      "after": [ "<Esc>", "A", ";", "<Esc>" ]
+    },
+    // Put bracket to the end of line
+    {
+      "before": [ "{", "{" ],
+      "after": [ "<Esc>", "A", "{", "<Esc>", "l", "i", "Enter" ]
+    },
+  ],
+  //! Which key Extention
+  "whichkey.bindings": [
+    {
+      "key": "p",
+      "name": "Command Pallette",
+      "type": "command",
+      "command": "workbench.action.showCommands"
+    },
+    {
+      "key": "/",
+      "name": "Comment",
+      "type": "command",
+      "command": "editor.action.commentLine",
+      "args": "<C-/>"
+    },
+    {
+      "key": "h",
+      "name": "Hot Restart",
+      "type": "command",
+      "command": "flutter.hotRestart"
+    },
+    {
+      "key": "e",
+      "name": "Toggle Explorer",
+      "type": "command",
+      "command": "workbench.action.toggleSidebarVisibility"
+    },
+    {
+      "key": "t",
+      "name": "Toggle Activity Bar",
+      "type": "command",
+      "command": "workbench.action.toggleActivityBarVisibility"
+    },
+    {
+      "key": "s",
+      "name": "Setting",
+      "type": "command",
+      "command": "workbench.action.openSettings"
+    },
+    {
+      "key": "f",
+      "name": "Open Files",
+      "type": "command",
+      "command": "workbench.action.quickOpen"
+    },
+  ],
+  //! Theme and Color
+  "workbench.colorCustomizations": {
+    "[Default Dark+]": {
+      "editor.background": "#232323",
+      "statusBar.background": "#232323",
+      "statusBar.foreground": "#569CD6",
+      "statusBarItem.remoteBackground": "#232323",
+      "statusBarItem.remoteForeground": "#569CD6",
+      "sideBar.background": "#232323",
+      "activityBar.background": "#232323",
+      "scrollbarSlider.background": "#2E2E2E",
+      "tab.inactiveBackground": "#2E2E2E",
+      "titleBar.activeBackground": "#232323",
+      "editorGroupHeader.tabsBackground": "#232323",
+      "scrollbar.shadow": "#232323",
+      "statusBar.debuggingBackground": "#232323",
+    },
+  },
+  "window.zoomLevel": -0.3,
+  "workbench.activityBar.visible": false,
+  "git.openRepositoryInParentFolders": "never",
+}
