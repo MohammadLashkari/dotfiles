@@ -124,7 +124,7 @@
         "key": "alt+h",
         "command": "workbench.action.previousEditor"
     },
-    // Move active editor left or right (useful for full-stack web dev).
+    // Move active editor left or right
     {
         "key": "ctrl+alt+h",
         "command": "moveActiveEditor",
