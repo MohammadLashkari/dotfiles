@@ -233,6 +233,11 @@
       "before": [ ";", ";" ],
       "after": [ "<Esc>", "A", ";", "<Esc>" ]
     },
+    // Put equal sign (useful for creating lamda functions)
+    {
+      "before": [ "=", "=" ],
+      "after": [ "<Esc>", "A", " ", "=", ">" ]
+    },
     // Put bracket to the end of line
     {
       "before": [ "{", "{" ],
