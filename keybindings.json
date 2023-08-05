@@ -52,7 +52,7 @@
     {
         "key": "ctrl+k",
         "command": "workbench.action.quickOpenSelectPrevious",
-        "when": "inQuickOpen "
+        "when": "inQuickOpen"
     },
     // Moving around
     {
@@ -77,11 +77,11 @@
     },
     {
         "key": "ctrl+h",
-        "command": "workbench.action.navigateLeft",
+        "command": "workbench.action.navigateLeft"
     },
     {
         "key": "ctrl+l",
-        "command": "workbench.action.navigateRight",
+        "command": "workbench.action.navigateRight"
     },
     // PageDown/Up when hover is open
     {
@@ -104,6 +104,17 @@
         "command": "editor.action.scrollRightHover",
         "when": "editorHoverFocused"
     },
+    // Cycle through vscode activity bar icons
+    {
+        "key": "ctrl+j",
+        "command": "workbench.action.nextSideBarView",
+        "when": "sideBarFocus"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "workbench.action.previousSideBarView",
+        "when": "sideBarFocus"
+    },
     // Ensure that tab button works in vim.
     {
         "key": "tab",
@@ -124,7 +135,7 @@
         "key": "alt+h",
         "command": "workbench.action.previousEditor"
     },
-    // Move active editor left or right (useful for full-stack web dev).
+    // Move active editor left or right
     {
         "key": "ctrl+alt+h",
         "command": "moveActiveEditor",
@@ -185,12 +196,12 @@
     },
     // Create new file or folder in expelor
     {
-        "key": "a",
+        "key": "n",
         "command": "explorer.newFile",
         "when": "filesExplorerFocus && !inputFocus"
     },
     {
-        "key": "shift+a",
+        "key": "shift+n",
         "command": "explorer.newFolder",
         "when": "filesExplorerFocus && !inputFocus"
     },
@@ -209,13 +220,35 @@
         "command": "-renameFile",
         "when": "explorerViewletVisible && filesExplorerFocus"
     },
-    // 
-    // {
-    //     "key": "ctrl+space",
-    //     "command": "workbench.action.increaseViewSize"
-    // },
-    // {
-    //     "key": "space+d",
-    //     "command": "workbench.action.decreaseViewSize"
-    // },
+    // Change size of open tabs
+    {
+        "key": "ctrl+shift+l",
+        "command": "workbench.action.terminal.resizePaneRight",
+        "when": "terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "ctrl+right",
+        "command": "workbench.action.increaseViewWidth",
+        "when": "vim.mode == 'Normal' && editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+h",
+        "command": "workbench.action.terminal.resizePaneLeft",
+        "when": "terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "ctrl+left",
+        "command": "workbench.action.decreaseViewWidth",
+        "when": "vim.mode == 'Normal' && editorTextFocus"
+    },
+    {
+        "key": "ctrl+up",
+        "command": "workbench.action.increaseViewHeight",
+        "when": "vim.mode == 'Normal' && editorTextFocus"
+    },
+    {
+        "key": "ctrl+down",
+        "command": "workbench.action.decreaseViewHeight",
+        "when": "vim.mode == 'Normal' && editorTextFocus"
+    }
 ]
