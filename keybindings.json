@@ -220,7 +220,6 @@
         "command": "-renameFile",
         "when": "explorerViewletVisible && filesExplorerFocus"
     },
-<<<<<<< HEAD
     // Change size of open tabs
     {
         "key": "ctrl+shift+l",
@@ -253,15 +252,3 @@
         "when": "vim.mode == 'Normal' && editorTextFocus"
     }
 ]
-=======
-    // 
-    // {
-    //     "key": "ctrl+space",
-    //     "command": "workbench.action.increaseViewSize"
-    // },
-    // {
-    //     "key": "space+d",
-    //     "command": "workbench.action.decreaseViewSize"
-    // },
-]
->>>>>>> faf3aa56098fb7b6f393aa0256da8720240359af
