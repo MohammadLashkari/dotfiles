@@ -1,11 +1,12 @@
 {
+  "workbench.iconTheme": "material-icon-theme",
   "workbench.colorTheme": "Default Dark+",
-  "workbench.iconTheme": "vscode-icons",
   "editor.mouseWheelZoom": true,
   "editor.smoothScrolling": true,
   "editor.fontSize": 19.5,
   "editor.cursorWidth": 3,
   "editor.bracketPairColorization.enabled": true,
+  "editor.lineNumbers": "relative",
   "editor.guides.bracketPairs": "active",
   "editor.formatOnSave": true,
   "editor.formatOnType": true,
@@ -13,23 +14,22 @@
   "editor.cursorBlinking": "expand",
   "editor.overviewRulerBorder": false,
   "editor.hideCursorInOverviewRuler": true,
-  "workbench.sideBar.location": "right",
   "editor.minimap.enabled": false,
   "extensions.autoUpdate": "onlyEnabledExtensions",
   "editor.parameterHints.cycle": true,
-  "workbench.editor.untitled.hint": "hidden",
   "editor.scrollbar.horizontal": "hidden",
   "workbench.startupEditor": "none",
   "search.searchOnType": false,
   "window.titleBarStyle": "custom",
   "window.title": " ",
-  "workbench.tree.indent": 20,
-  "explorer.compactFolders": false,
-  "editor.lineNumbers": "relative",
+  "workbench.tree.indent": 16,
   "window.menuBarVisibility": "compact",
   "workbench.layoutControl.enabled": false,
   "errorLens.fontWeight": "400",
   "json.format.keepLines": true,
+  "workbench.editor.untitled.hint": "hidden",
+  "explorer.compactFolders": false,
+  "debug.toolBarLocation": "docked",
   // Hide and exclude files
   "files.exclude": {
     "**/.classpath": true,
@@ -44,7 +44,6 @@
   "activitusbar.activeColour": "#569CD6",
   //! python
   "python.analysis.autoImportCompletions": true,
-  "python.formatting.provider": "black",
   // "python.languageServer": "Default",
   //! QuickFix settings
   "editor.quickSuggestions": {
@@ -70,12 +69,12 @@
     "MyPowerShell": {
       "path": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
       "args": [ "-NoLogo" ]
-    },
+    }
   },
-  "terminal.integrated.gpuAcceleration": "off",
-  "terminal.integrated.fontSize": 17,
+  "terminal.integrated.fontSize": 20,
   "terminal.integrated.fontWeight": "normal",
-  "terminal.integrated.lineHeight": 1.6,
+  "terminal.integrated.lineHeight": 1.4,
+  "terminal.integrated.altClickMovesCursor": false,
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.defaultProfile.windows": "Git Bash",
   "debug.terminal.clearBeforeReusing": true,
@@ -88,7 +87,7 @@
       "quickfix.add.required.multi": true,
       "quickfix.create.constructorForFinalFields": true,
       "quickfix.create.constructorForFinalFields.multi": true,
-      "source.organizeImports": true,
+      "source.organizeImports": true
     },
     "editor.rulers": [
       // 80
@@ -99,7 +98,7 @@
     "editor.tabCompletion": "off",
     "editor.wordBasedSuggestions": false,
     // show suggestons when start to type (solve enter problem)
-    "editor.suggestOnTriggerCharacters": false,
+    "editor.suggestOnTriggerCharacters": false
   },
   "dart.debugExternalPackageLibraries": true,
   "dart.debugSdkLibraries": true,
@@ -113,21 +112,20 @@
     "pubspec.yaml": ".flutter-plugins, .packages, .dart_tool, .flutter-plugins-dependencies, .metadata, .packages, pubspec.lock, build.yaml, analysis_options.yaml, all_lint_rules.yaml",
     ".gitignore": ".gitattributes, .gitmodules, .gitmessage, .mailmap, .git-blame*",
     "readme.*": "authors, backers.md, changelog*, citation*, code_of_conduct.md, codeowners, contributing.md, contributors, copying, credits, governance.md, history.md, license*, maintainers, readme*, security.md, sponsors.md",
-    "*.dart": "$(capture).g.dart, $(capture).freezed.dart",
+    "*.dart": "$(capture).g.dart, $(capture).freezed.dart"
   },
   // Add Const Automatically
   "editor.codeActionsOnSave": {
     "source.organizeImports": true,
-    "source.fixAll": true,
+    "source.fixAll": true
   },
   "dart_data_class_generator.useEquatable": true,
   //! vim Settings
   "vim.leader": "<space>",
   "vim.smartcase": true,
   "vim.foldfix": true,
-  "vim.useSystemClipboard": true,
   "vim.highlightedyank.enable": true,
-  "vim.hlsearch": true,
+  "vim.timeout": 500,
   "vim.handleKeys": {
     // VS Code search in file
     "<C-f>": false,
@@ -143,14 +141,15 @@
     "<C-z>": false,
     // Redo
     "<C-y>": false,
-    "//": false
+    // CtrlA
+    "<C-a>": false
   },
   "vim.normalModeKeyBindingsNonRecursive": [
     // Fix undo ( ctrl+z )
     {
       "before": [ "u" ],
       "after": [ ],
-      "commands": [ { "command": "undo", "args": [ ] } ],
+      "commands": [ { "command": "undo", "args": [ ] } ]
     },
     {
       "before": [ "<C-r>" ],
@@ -160,12 +159,12 @@
     // Cut(delete) without update register
     {
       "before": [ "<leader>", "d" ],
-      "after": [ "\"", "_", "d" ],
+      "after": [ "\"", "_", "d" ]
     },
     // Cut(delete) without update register
     {
       "before": [ "<leader>", "x" ],
-      "after": [ "\"", "_", "x" ],
+      "after": [ "\"", "_", "x" ]
     },
     // Which key
     {
@@ -195,18 +194,18 @@
     {
       "before": [ "g", "h" ],
       "commands": [ "editor.action.showDefinitionPreviewHover" ]
-    },
+    }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     // Put(paste) last thing yanked, not deleted == P
     {
       "before": [ "<leader>", "p" ],
-      "after": [ "\"", "0", "p" ],
+      "after": [ "\"", "0", "p" ]
     },
     // Cut(delete) without update register
     {
       "before": [ "<leader>", "d" ],
-      "after": [ "\"", "_", "d" ],
+      "after": [ "\"", "_", "d" ]
     },
     // Which key
     {
@@ -225,7 +224,7 @@
     {
       "before": [ "/" ],
       "commands": [ "editor.action.commentLine" ]
-    },
+    }
   ],
   "vim.insertModeKeyBindings": [
     // Put semicolon to the end of line
@@ -235,14 +234,14 @@
     },
     // Put equal sign (useful for creating lamda functions)
     {
-      "before": [ "=", "=" ],
-      "after": [ "<Esc>", "A", " ", "=", ">" ]
+      "before": [ ">", ">" ],
+      "after": [ "<Esc>", "l", "a", " ", "=", ">" ]
     },
     // Put bracket to the end of line
     {
       "before": [ "{", "{" ],
       "after": [ "<Esc>", "A", "{", "<Esc>", "l", "i", "Enter" ]
-    },
+    }
   ],
   //! Which key Extention
   "whichkey.bindings": [
@@ -267,7 +266,7 @@
     },
     {
       "key": "e",
-      "name": "Toggle Explorer",
+      "name": "Open Explorer",
       "type": "command",
       "command": "workbench.action.toggleSidebarVisibility"
     },
@@ -289,6 +288,12 @@
       "type": "command",
       "command": "workbench.action.quickOpen"
     },
+    {
+      "key": "d",
+      "name": "Open Debug",
+      "type": "command",
+      "command": "workbench.view.debug"
+    }
   ],
   //! Theme and Color
   "workbench.colorCustomizations": {
@@ -306,9 +311,11 @@
       "editorGroupHeader.tabsBackground": "#232323",
       "scrollbar.shadow": "#232323",
       "statusBar.debuggingBackground": "#232323",
-    },
+      "terminal.ansiGreen": "#16A085"
+    }
   },
-  "window.zoomLevel": -0.3,
-  "workbench.activityBar.visible": false,
+  "window.zoomLevel": -0.5,
   "git.openRepositoryInParentFolders": "never",
+  "window.commandCenter": false,
+  "workbench.activityBar.visible": false
 }
