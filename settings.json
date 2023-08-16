@@ -129,8 +129,6 @@
   "vim.handleKeys": {
     // VS Code search in file
     "<C-f>": false,
-    // VS Code new marker @ next occurence
-    "<C-d>": false,
     // Copy
     "<C-c>": false,
     // Cut
@@ -197,10 +195,10 @@
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
-    // Put(paste) last thing yanked, not deleted == P
+    // Put(paste) without updating register
     {
       "before": [ "<leader>", "p" ],
-      "after": [ "\"", "0", "p" ]
+      "after": [ "\"", "_","d" ,"P" ]
     },
     // Cut(delete) without update register
     {
