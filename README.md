@@ -1,7 +1,7 @@
 # Configs
 
-### vscode settings
-### vscode keybindings
-### .vimrc
-### .inputrc
+- vscode settings
+- vscode keybindings
+- .vimrc
+- .inputrc
 
