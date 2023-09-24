@@ -1,9 +1,12 @@
 {
   "workbench.iconTheme": "material-icon-theme",
   "workbench.colorTheme": "Default Dark+",
+  "workbench.layoutControl.enabled": false,
+  "window.menuBarVisibility": "compact",
   "editor.mouseWheelZoom": true,
   "editor.smoothScrolling": true,
-  "editor.fontSize": 19.5,
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.fontSize": 18.8, // 20
   "editor.cursorWidth": 3,
   "editor.bracketPairColorization.enabled": true,
   "editor.lineNumbers": "relative",
@@ -17,19 +20,17 @@
   "editor.minimap.enabled": false,
   "extensions.autoUpdate": "onlyEnabledExtensions",
   "editor.parameterHints.cycle": true,
-  "editor.scrollbar.horizontal": "hidden",
   "workbench.startupEditor": "none",
   "search.searchOnType": false,
   "window.titleBarStyle": "custom",
   "window.title": " ",
-  "workbench.tree.indent": 16,
-  "window.menuBarVisibility": "compact",
-  "workbench.layoutControl.enabled": false,
+  "workbench.tree.indent": 10,
   "errorLens.fontWeight": "400",
   "json.format.keepLines": true,
   "workbench.editor.untitled.hint": "hidden",
   "explorer.compactFolders": false,
   "debug.toolBarLocation": "docked",
+  "window.commandCenter": false,
   // Hide and exclude files
   "files.exclude": {
     "**/.classpath": true,
@@ -42,6 +43,40 @@
   },
   "activitusbar.inactiveColour": "#569CD6",
   "activitusbar.activeColour": "#569CD6",
+  "activitusbar.views": [
+    {
+      "name": "settings",
+      "codicon": "gear"
+    },
+    {
+      "name": "explorer",
+      "codicon": "explorer-view-icon"
+    },
+    {
+      "name": "search",
+      "codicon": "search-view-icon"
+    },
+    {
+      "name": "scm",
+      "codicon": "source-control-view-icon"
+    },
+    {
+      "name": "debug",
+      "codicon": "run-view-icon"
+    },
+    {
+      "name": "workbench.view.testing",
+      "codicon": "test-view-icon"
+    },
+    {
+      "name": "extensions",
+      "codicon": "extensions-view-icon"
+    },
+    {
+      "name": "command.workbench.action.terminal.toggleTerminal",
+      "codicon": "terminal"
+    }
+  ],
   //! python
   "python.analysis.autoImportCompletions": true,
   // "python.languageServer": "Default",
@@ -60,6 +95,7 @@
   "code-runner.saveFileBeforeRun": true,
   "code-runner.fileDirectoryAsCwd": true,
   "code-runner.showExecutionMessage": false,
+  "code-runner.runInTerminal": true,
   //! Terminal settings
   "terminal.integrated.profiles.windows": {
     "Cmder": {
@@ -71,22 +107,22 @@
       "args": [ "-NoLogo" ]
     }
   },
-  "terminal.integrated.fontSize": 20,
+  "terminal.integrated.fontSize": 19,
   "terminal.integrated.fontWeight": "normal",
   "terminal.integrated.lineHeight": 1.4,
   "terminal.integrated.altClickMovesCursor": false,
   "terminal.integrated.cursorBlinking": true,
-  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
   "debug.terminal.clearBeforeReusing": true,
   "terminal.integrated.enableMultiLinePasteWarning": false,
-  "terminal-in-status-bar.statusBarPriority": 10000,
+  "terminal.integrated.tabs.enabled": false,
+  "terminal.integrated.shellIntegration.decorationsEnabled": "never",
+  "terminal.integrated.tabs.description": " ",
   //! Dart settings
   "[dart]": {
     "editor.codeActionsOnSave": {
-      "quickfix.add.required": true,
-      "quickfix.add.required.multi": true,
-      "quickfix.create.constructorForFinalFields": true,
-      "quickfix.create.constructorForFinalFields.multi": true,
+      // "quickfix.create.constructorForFinalFields.multi": true,
+      // "quickfix.create.constructorForFinalFields": true,
       "source.organizeImports": true
     },
     "editor.rulers": [
@@ -100,12 +136,13 @@
     // show suggestons when start to type (solve enter problem)
     "editor.suggestOnTriggerCharacters": false
   },
-  "dart.debugExternalPackageLibraries": true,
-  "dart.debugSdkLibraries": true,
+  "dart.experimentalRefactors": true,
+  "dart.debugExternalPackageLibraries": false,
+  "dart.debugSdkLibraries": false,
+  "dart.lineLength": 100,
   //! Flutter Settings
-  // Guide lines (tree widget)
-  "dart.previewFlutterUiGuides": true,
   // Nest files in Flutter projects
+  "dart.previewFlutterUiGuides": true,
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.expand": false,
   "explorer.fileNesting.patterns": {
@@ -126,6 +163,7 @@
   "vim.foldfix": true,
   "vim.highlightedyank.enable": true,
   "vim.timeout": 500,
+  "vim.hlsearch": true,
   "vim.handleKeys": {
     // VS Code search in file
     "<C-f>": false,
@@ -192,23 +230,52 @@
     {
       "before": [ "g", "h" ],
       "commands": [ "editor.action.showDefinitionPreviewHover" ]
+    },
+    // Move 1/2 screen down and center screen
+    {
+      "before": [ "<c-d>" ],
+      "after": [ "<c-d>", "z", "z" ]
+    },
+    // Move 1/2 screen up and center screen
+    {
+      "before": [ "<c-u>" ],
+      "after": [ "<c-u>", "z", "z" ]
+    },
+    // :nohl
+    {
+      "before": [ "<Escape>" ],
+      "commands": [ ":nohl" ]
+    },
+    // Open files
+    {
+      "before": [ "<leader>", "f" ],
+      "commands": [ "workbench.action.quickOpen" ]
+    },
+    // Close Window :q
+    {
+      "before": [ "<leader>", "w" ],
+      "after": [ ":", "q", "<CR>" ]
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     // Put(paste) without updating register
     {
       "before": [ "<leader>", "p" ],
-      "after": [ "\"", "_","d" ,"P" ]
+      "after": [ "\"", "_", "d", "P" ]
     },
     // Cut(delete) without update register
     {
       "before": [ "<leader>", "d" ],
       "after": [ "\"", "_", "d" ]
     },
-    // Which key
+    // fix $ sign problem
     {
-      "before": [ "<leader>", "<leader>" ],
-      "commands": [ "whichkey.show" ]
+      "before": [ "$" ],
+      "after": [ "g", "_" ]
+    },
+    {
+      "before": [ "g", "_" ],
+      "after": [ "$" ]
     },
     // Move selected lines while staying in visual mode
     {
@@ -233,7 +300,7 @@
     // Put equal sign (useful for creating lamda functions)
     {
       "before": [ ">", ">" ],
-      "after": [ "<Esc>", "l", "a", " ", "=", ">" ]
+      "after": [ "<Esc>", "l", "a", "=", ">" ]
     },
     // Put bracket to the end of line
     {
@@ -276,15 +343,9 @@
     },
     {
       "key": "s",
-      "name": "Setting",
+      "name": "Search Files",
       "type": "command",
-      "command": "workbench.action.openSettings"
-    },
-    {
-      "key": "f",
-      "name": "Open Files",
-      "type": "command",
-      "command": "workbench.action.quickOpen"
+      "command": "search.action.openNewEditorToSide"
     },
     {
       "key": "d",
@@ -303,17 +364,16 @@
       "statusBarItem.remoteForeground": "#569CD6",
       "sideBar.background": "#232323",
       "activityBar.background": "#232323",
-      "scrollbarSlider.background": "#2E2E2E",
       "tab.inactiveBackground": "#2E2E2E",
       "titleBar.activeBackground": "#232323",
       "editorGroupHeader.tabsBackground": "#232323",
       "scrollbar.shadow": "#232323",
       "statusBar.debuggingBackground": "#232323",
-      "terminal.ansiGreen": "#16A085"
+      "terminal.ansiGreen": "#16A085",
+      "terminal.ansiBrightBlue": "#569CD6"
     }
   },
-  "window.zoomLevel": -0.5,
+  "window.zoomLevel": -0.35,
   "git.openRepositoryInParentFolders": "never",
-  "window.commandCenter": false,
   "workbench.activityBar.visible": false
 }
