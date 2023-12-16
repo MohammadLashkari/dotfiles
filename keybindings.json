@@ -13,7 +13,7 @@
     {
         "key": "shift+;",
         "command": "vim.showQuickpickCmdLine",
-        "when": "editorTextFocus && vim.mode == 'Normal'"
+        "when": "editorTextFocus && vim.mode != 'Insert'"
     },
     // QickFix 
     {
@@ -21,12 +21,6 @@
         "command": "quickfixed.showQuickActions",
         "when": "vim.mode == 'Normal' && editorTextFocus"
     },
-    // Show hover in left panel 
-    // {
-    //     "key": "shift+l",
-    //     "command": "workbench.action.toggleAuxiliaryBar",
-    //     "when": "vim.mode == 'Normal'"
-    // },
     // Select from the autosuggest menu
     {
         "key": "ctrl+j",
@@ -48,7 +42,7 @@
         "command": "workbench.action.quickOpenSelectPrevious",
         "when": "inQuickOpen"
     },
-    // Select form quick fix menu
+    // Select form quick fix menu (Ctrl + .)
     {
         "key": "ctrl+k",
         "command": "selectPrevCodeAction",
@@ -109,17 +103,6 @@
         "command": "editor.action.scrollRightHover",
         "when": "editorHoverFocused"
     },
-    // Cycle through vscode activity bar icons
-    {
-        "key": "ctrl+j",
-        "command": "workbench.action.nextSideBarView",
-        "when": "sideBarFocus"
-    },
-    {
-        "key": "ctrl+k",
-        "command": "workbench.action.previousSideBarView",
-        "when": "sideBarFocus"
-    },
     // Ensure that tab button works in vim.
     {
         "key": "tab",
@@ -134,25 +117,22 @@
     // Navigate between open file tabs
     {
         "key": "alt+l",
-        "command": "workbench.action.nextEditor",
-        "when": "editorTextFocus"
+        "command": "workbench.action.nextEditor"
     },
     {
         "key": "alt+h",
-        "command": "workbench.action.previousEditor",
-        "when": "editorTextFocus"
+        "command": "workbench.action.previousEditor"
     },
-    // Go to next panel
+    // Navigate between panels
     {
         "key": "alt+l",
         "command": "workbench.action.nextPanelView",
-        "when": "focusedView"
+        "when": "panelFocus"
     },
-    // Go to previous panel
     {
         "key": "alt+h",
         "command": "workbench.action.previousPanelView",
-        "when": "focusedView"
+        "when": "panelFocus"
     },
     // Move active editor left or right
     {
@@ -184,6 +164,10 @@
     {
         "key": "ctrl+;",
         "command": "workbench.action.terminal.toggleTerminal"
+    },
+    {
+        "key": "ctrl+'",
+        "command": "workbench.debug.action.toggleRepl"
     },
     {
         "key": "ctrl+s",
@@ -224,15 +208,20 @@
         "key": "ctrl+j",
         "command": "-workbench.action.togglePanel"
     },
+    {
+        "key": "shift+k",
+        "command": "workbench.action.terminal.scrollUpPage",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "shift+j",
+        "command": "workbench.action.terminal.scrollDownPage",
+        "when": "terminalFocus"
+    },
     // Create new file or folder in expelor
     {
         "key": "n",
         "command": "explorer.newFile",
-        "when": "filesExplorerFocus && !inputFocus"
-    },
-    {
-        "key": "shift+n",
-        "command": "explorer.newFolder",
         "when": "filesExplorerFocus && !inputFocus"
     },
     {
