@@ -1,19 +1,19 @@
 {
-  "workbench.iconTheme": "material-icon-theme",
   "workbench.colorTheme": "Default Dark+",
-  "workbench.layoutControl.enabled": false,
-  "window.menuBarVisibility": "compact",
   "editor.mouseWheelZoom": true,
   "editor.smoothScrolling": true,
-  "editor.scrollbar.horizontal": "hidden",
-  "editor.fontSize": 18.8, // 20
-  "editor.cursorWidth": 3,
+  // "editor.scrollbar.horizontal": "hidden",
+  "editor.fontSize": 19, // 20
+  "window.menuBarVisibility": "compact",
+  "workbench.layoutControl.enabled": false,
   "editor.bracketPairColorization.enabled": true,
   "editor.lineNumbers": "relative",
+  // "editor.suggest.insertMode": "insert",
   "editor.guides.bracketPairs": "active",
   "editor.formatOnSave": true,
   "editor.formatOnType": true,
   "breadcrumbs.enabled": false,
+  "window.commandCenter": false,
   "editor.cursorBlinking": "expand",
   "editor.overviewRulerBorder": false,
   "editor.hideCursorInOverviewRuler": true,
@@ -27,10 +27,12 @@
   "workbench.tree.indent": 10,
   "errorLens.fontWeight": "400",
   "json.format.keepLines": true,
-  "workbench.editor.untitled.hint": "hidden",
   "explorer.compactFolders": false,
   "debug.toolBarLocation": "docked",
-  "window.commandCenter": false,
+  "workbench.editor.empty.hint": "hidden",
+  "window.density.editorTabHeight": "compact",
+  "editor.renderLineHighlight": "none",
+  "errorLens.messageBackgroundMode": "none",
   // Hide and exclude files
   "files.exclude": {
     "**/.classpath": true,
@@ -41,6 +43,7 @@
   "editor.unicodeHighlight.allowedLocales": {
     "cs": true
   },
+  // Activitusbar 
   "activitusbar.inactiveColour": "#569CD6",
   "activitusbar.activeColour": "#569CD6",
   "activitusbar.views": [
@@ -77,24 +80,22 @@
       "codicon": "terminal"
     }
   ],
-  //! python
-  "python.analysis.autoImportCompletions": true,
-  // "python.languageServer": "Default",
   //! QuickFix settings
   "editor.quickSuggestions": {
     "comments": "inline",
     "strings": "on",
     "other": "on"
   },
-  "editor.wordBasedSuggestions": false,
+  "editor.wordBasedSuggestions": "off",
   "editor.parameterHints.enabled": false,
+  //! On save
+  "editor.codeActionsOnSave": {
+    "source.addMissingImports": "explicit",
+    "source.organizeImports": "explicit",
+    "source.fixAll": "explicit"
+  },
   //! Code runner
-  "code-runner.clearPreviousOutput": true,
-  "code-runner.ignoreSelection": true,
   "code-runner.saveAllFilesBeforeRun": true,
-  "code-runner.saveFileBeforeRun": true,
-  "code-runner.fileDirectoryAsCwd": true,
-  "code-runner.showExecutionMessage": false,
   "code-runner.runInTerminal": true,
   //! Terminal settings
   "terminal.integrated.profiles.windows": {
@@ -107,23 +108,19 @@
       "args": [ "-NoLogo" ]
     }
   },
-  "terminal.integrated.fontSize": 19,
+  "terminal.integrated.fontSize": 18.5,
   "terminal.integrated.fontWeight": "normal",
-  "terminal.integrated.lineHeight": 1.4,
+  "terminal.integrated.lineHeight": 1.2,
   "terminal.integrated.altClickMovesCursor": false,
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.defaultProfile.windows": "PowerShell",
   "debug.terminal.clearBeforeReusing": true,
   "terminal.integrated.enableMultiLinePasteWarning": false,
-  "terminal.integrated.tabs.enabled": false,
   "terminal.integrated.shellIntegration.decorationsEnabled": "never",
-  "terminal.integrated.tabs.description": " ",
   //! Dart settings
   "[dart]": {
     "editor.codeActionsOnSave": {
-      // "quickfix.create.constructorForFinalFields.multi": true,
-      // "quickfix.create.constructorForFinalFields": true,
-      "source.organizeImports": true
+      "source.organizeImports": "explicit"
     },
     "editor.rulers": [
       // 80
@@ -132,14 +129,13 @@
     "editor.suggest.snippetsPreventQuickSuggestions": false,
     "editor.suggestSelection": "first",
     "editor.tabCompletion": "off",
-    "editor.wordBasedSuggestions": false,
+    "editor.wordBasedSuggestions": "off",
     // show suggestons when start to type (solve enter problem)
     "editor.suggestOnTriggerCharacters": false
   },
   "dart.experimentalRefactors": true,
   "dart.debugExternalPackageLibraries": false,
   "dart.debugSdkLibraries": false,
-  "dart.lineLength": 100,
   //! Flutter Settings
   // Nest files in Flutter projects
   "dart.previewFlutterUiGuides": true,
@@ -151,19 +147,14 @@
     "readme.*": "authors, backers.md, changelog*, citation*, code_of_conduct.md, codeowners, contributing.md, contributors, copying, credits, governance.md, history.md, license*, maintainers, readme*, security.md, sponsors.md",
     "*.dart": "$(capture).g.dart, $(capture).freezed.dart"
   },
-  // Add Const Automatically
-  "editor.codeActionsOnSave": {
-    "source.organizeImports": true,
-    "source.fixAll": true
-  },
-  "dart_data_class_generator.useEquatable": true,
   //! vim Settings
   "vim.leader": "<space>",
   "vim.smartcase": true,
   "vim.foldfix": true,
   "vim.highlightedyank.enable": true,
-  "vim.timeout": 500,
+  // "vim.timeout": 500,
   "vim.hlsearch": true,
+  "vim.visualstar": true,
   "vim.handleKeys": {
     // VS Code search in file
     "<C-f>": false,
@@ -184,13 +175,11 @@
     // Fix undo ( ctrl+z )
     {
       "before": [ "u" ],
-      "after": [ ],
-      "commands": [ { "command": "undo", "args": [ ] } ]
+      "commands": [ "undo" ]
     },
     {
       "before": [ "<C-r>" ],
-      "after": [ ],
-      "commands": [ { "command": "redo", "args": [ ] } ]
+      "commands": [ "redo" ]
     },
     // Cut(delete) without update register
     {
@@ -217,15 +206,6 @@
       "before": [ "<leader>", "s" ],
       "commands": [ "workbench.action.files.save" ]
     },
-    // Splits
-    {
-      "before": [ "leader", "v" ],
-      "commands": [ ":vsplit" ]
-    },
-    {
-      "before": [ "leader", "h" ],
-      "commands": [ ":split" ]
-    },
     // Show Hover
     {
       "before": [ "g", "h" ],
@@ -243,7 +223,7 @@
     },
     // :nohl
     {
-      "before": [ "<Escape>" ],
+      "before": [ "<c-n>" ],
       "commands": [ ":nohl" ]
     },
     // Open files
@@ -297,11 +277,6 @@
       "before": [ ";", ";" ],
       "after": [ "<Esc>", "A", ";", "<Esc>" ]
     },
-    // Put equal sign (useful for creating lamda functions)
-    {
-      "before": [ ">", ">" ],
-      "after": [ "<Esc>", "l", "a", "=", ">" ]
-    },
     // Put bracket to the end of line
     {
       "before": [ "{", "{" ],
@@ -311,17 +286,10 @@
   //! Which key Extention
   "whichkey.bindings": [
     {
-      "key": "p",
+      "key": "c",
       "name": "Command Pallette",
       "type": "command",
       "command": "workbench.action.showCommands"
-    },
-    {
-      "key": "/",
-      "name": "Comment",
-      "type": "command",
-      "command": "editor.action.commentLine",
-      "args": "<C-/>"
     },
     {
       "key": "h",
@@ -348,6 +316,12 @@
       "command": "search.action.openNewEditorToSide"
     },
     {
+      "key": "r",
+      "name": "Thunder Client",
+      "type": "command",
+      "command": "workbench.view.extension.thunder-client"
+    },
+    {
       "key": "d",
       "name": "Open Debug",
       "type": "command",
@@ -370,10 +344,12 @@
       "scrollbar.shadow": "#232323",
       "statusBar.debuggingBackground": "#232323",
       "terminal.ansiGreen": "#16A085",
-      "terminal.ansiBrightBlue": "#569CD6"
+      "terminal.ansiBrightBlue": "#569CD6",
+      "sideBar.border": "#3e3e42"
     }
   },
-  "window.zoomLevel": -0.35,
+  "window.zoomLevel": -0.3, //-0.3
   "git.openRepositoryInParentFolders": "never",
-  "workbench.activityBar.visible": false
+  "workbench.iconTheme": "gruvbox-material-icon-theme",
+  "workbench.activityBar.location": "hidden"
 }
