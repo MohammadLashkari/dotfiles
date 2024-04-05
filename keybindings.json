@@ -9,12 +9,6 @@
         "command": "-code-runner.run"
     },
     //! Vim Setup
-    // Show command line
-    {
-        "key": "shift+;",
-        "command": "vim.showQuickpickCmdLine",
-        "when": "editorTextFocus && vim.mode != 'Insert'"
-    },
     // QickFix 
     {
         "key": "shift+j",
@@ -159,7 +153,8 @@
     },
     {
         "key": "ctrl+enter",
-        "command": "workbench.action.toggleMaximizedPanel"
+        "command": "workbench.action.toggleMaximizedPanel",
+        "when": "panelFocus"
     },
     {
         "key": "ctrl+;",
@@ -175,28 +170,13 @@
         "when": "terminalFocus && terminalProcessSupported"
     },
     {
-        "key": "ctrl+\\",
-        "command": "-workbench.action.terminal.split",
-        "when": "terminalFocus && terminalProcessSupported"
-    },
-    {
         "key": "ctrl+k",
         "command": "workbench.action.terminal.focusNextPane",
         "when": "terminalFocus && terminalProcessSupported"
     },
     {
-        "key": "alt+ctrl+down",
-        "command": "-workbench.action.terminal.focusNextPane",
-        "when": "terminalFocus && terminalProcessSupported"
-    },
-    {
         "key": "ctrl+j",
         "command": "workbench.action.terminal.focusPreviousPane",
-        "when": "terminalFocus && terminalProcessSupported"
-    },
-    {
-        "key": "alt+ctrl+up",
-        "command": "-workbench.action.terminal.focusPreviousPane",
         "when": "terminalFocus && terminalProcessSupported"
     },
     {
@@ -234,31 +214,26 @@
         "command": "deleteFile",
         "when": "filesExplorerFocus && !inputFocus"
     },
-    {
-        "key": "enter",
-        "command": "-renameFile",
-        "when": "explorerViewletVisible && filesExplorerFocus"
-    },
     // Change size of open tabs
     {
         "key": "ctrl+left",
         "command": "workbench.action.terminal.resizePaneLeft",
-        "when": "terminalFocus && terminalProcessSupported"
+        "when": "panelFocus"
     },
     {
         "key": "ctrl+right",
         "command": "workbench.action.terminal.resizePaneRight",
-        "when": "terminalFocus && terminalProcessSupported"
+        "when": "panelFocus"
     },
     {
         "key": "ctrl+up",
         "command": "workbench.action.terminal.resizePaneUp",
-        "when": "terminalFocus && terminalProcessSupported"
+        "when": "panelFocus"
     },
     {
         "key": "ctrl+down",
         "command": "workbench.action.terminal.resizePaneDown",
-        "when": "terminalFocus && terminalProcessSupported"
+        "when": "panelFocus"
     },
     {
         "key": "ctrl+right",
@@ -279,11 +254,5 @@
         "key": "ctrl+down",
         "command": "workbench.action.decreaseViewHeight",
         "when": "vim.mode == 'Normal' && editorTextFocus"
-    },
-    // Cancel for vim multi-cursor mode
-    {
-        "key": "escape",
-        "command": "removeSecondaryCursors",
-        "when": "editorHasMultipleSelections && textInputFocus"
     }
 ]
