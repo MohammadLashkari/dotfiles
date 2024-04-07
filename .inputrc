@@ -8,5 +8,6 @@ set colored-completion-prefix on
 set show-all-if-unmodified on
 set colored-stats on
 set visible-stats on
+set bell-style none
 "\t": menu-complete
 "\e[Z": menu-complete-backward
