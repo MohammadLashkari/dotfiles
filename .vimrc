@@ -1,29 +1,43 @@
 
 syntax on
-set incsearch
-set smartcase
-set wildmenu
-set wildmode=longest,full,full
-set wildoptions=tagfile	
-set number
-set relativenumber
-set novisualbell
-set mouse=a
+" indent
 set tabstop=4 softtabstop =4 shiftwidth=4
 set expandtab
 set smartindent
 set autoindent
+" search
+set incsearch
+set smartcase
+set ignorecase
+set hlsearch
+" wildmenu
+set wildmenu
+set wildmode=longest,full,full
+set wildoptions=tagfile	
+" number
+set number
+set relativenumber
+" indent break
+set breakindent
+set showbreak=-->
+" time
+set timeoutlen=300
+set updatetime=300
 
+set clipboard=unnamedplus
+set mouse=a
 set hidden
-set shortmess+=c
+set novisualbell
+
+" set completeopt
+" set termguicolors
+" set shortmess+=c
 
 
-	           	
+" cursor	           	
 let &t_SI = "\e[5 q"
 let &t_EI = "\e[1 q"
 
-
-" mappings
 
 let mapleader = " "
 
@@ -32,8 +46,12 @@ vnoremap <leader>d "_d
 
 xnoremap <leader>p "_dP
 
-nnoremap <leader>v :vsplit
-nnoremap <leader>h :split
+vnoremap J :m '>+1<cr>gv=gv
+vnoremap K :m '<-2<cr>gv=gv
+
+inoremap ;; <C-o>A;
+
+nnoremap <CR> :noh<CR><CR>
 
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
@@ -45,13 +63,9 @@ noremap <c-down> <c-w>-
 noremap <c-left> <c-w>>
 noremap <c-right> <c-w><
 
-vnoremap J :m '>+1<cr>gv=gv
-vnoremap K :m '<-2<cr>gv=gv
 
-inoremap ;; <C-o>A;
 
-"--- STATUS LINE
-
+" status line
 set statusline=
 set statusline+=\ %M
 
