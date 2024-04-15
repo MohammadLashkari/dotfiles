@@ -1,23 +1,29 @@
 
 syntax on
 set incsearch
+set smartcase
 set wildmenu
 set wildmode=longest,full,full
 set wildoptions=tagfile	
-set relativenumber
 set number
-set smartcase
-set hidden
+set relativenumber
 set novisualbell
-set undolevels=1000
-set shortmess+=c
 set mouse=a
+set tabstop=4 softtabstop =4 shiftwidth=4
+set expandtab
+set smartindent
+set autoindent
 
+set hidden
+set shortmess+=c
+
+
+	           	
 let &t_SI = "\e[5 q"
 let &t_EI = "\e[1 q"
 
 
-" --- Mappings
+" mappings
 
 let mapleader = " "
 
@@ -42,14 +48,11 @@ noremap <c-right> <c-w><
 vnoremap J :m '>+1<cr>gv=gv
 vnoremap K :m '<-2<cr>gv=gv
 
+inoremap ;; <C-o>A;
+
 "--- STATUS LINE
 
 set statusline=
 set statusline+=\ %M
 
-"--- PLUGINS
-
-call plug#begin()
-
-call plug#end()
 
