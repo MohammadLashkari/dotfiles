@@ -37,6 +37,7 @@
   "editor.guides.highlightActiveIndentation": false,
   "editor.guides.highlightActiveBracketPair": false,
   "explorer.confirmDelete": false,
+  "explorer.autoReveal": false,
   "window.menuBarVisibility": "compact",
   // error lens
   "errorLens.messageBackgroundMode": "none",
