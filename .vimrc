@@ -1,40 +1,39 @@
-
 syntax on
-" indent
+
+set number
+set relativenumber
+
 set tabstop=4 softtabstop =4 shiftwidth=4
 set expandtab
 set smartindent
 set autoindent
-" search
+
 set incsearch
 set smartcase
 set ignorecase
 set hlsearch
-" wildmenu
+
 set wildmenu
 set wildmode=longest,full,full
 set wildoptions=tagfile	
-" number
-set number
-set relativenumber
-" indent break
+
+set completeopt=longest,menuone
+
 set breakindent
 set showbreak=-->
-" time
+
 set timeoutlen=300
 set updatetime=300
 
-set clipboard=unnamedplus
+set clipboard^=unnamed,unnamedplus
 set mouse=a
 set hidden
 set novisualbell
+set noshowmode
 
-" set completeopt
 " set termguicolors
 " set shortmess+=c
 
-
-" cursor	           	
 let &t_SI = "\e[5 q"
 let &t_EI = "\e[1 q"
 
@@ -49,9 +48,14 @@ xnoremap <leader>p "_dP
 vnoremap J :m '>+1<cr>gv=gv
 vnoremap K :m '<-2<cr>gv=gv
 
-inoremap ;; <C-o>A;
+nnoremap <leader>s :%s/<c-r><c-w>//gI<left><left><left>
 
-nnoremap <CR> :noh<CR><CR>
+nnoremap <c-d> <c-d>zz
+nnoremap <c-u> <c-u>zz
+
+inoremap ;; <c-o>A;
+
+nnoremap <cr> :noh<cr><cr>
 
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
@@ -63,10 +67,6 @@ noremap <c-down> <c-w>-
 noremap <c-left> <c-w>>
 noremap <c-right> <c-w><
 
-
-
-" status line
 set statusline=
 set statusline+=\ %M
-
 
