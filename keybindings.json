@@ -1,53 +1,38 @@
 [
-    //! code runner
+    // show definition hover
+    {
+        "key": "shift+k",
+        "command": "editor.action.showHover",
+        "when": "vim.mode == 'Normal' && editorTextFocus"
+    },
+    // qickfix (quickfixed extension)
     {
         "key": "shift+space",
-        "command": "code-runner.run"
-    },
-    {
-        "key": "ctrl+alt+n",
-        "command": "-code-runner.run"
-    },
-    //! Vim Setup
-    // QickFix 
-    {
-        "key": "shift+j",
         "command": "quickfixed.showQuickActions",
         "when": "vim.mode == 'Normal' && editorTextFocus"
     },
-    // Select from the autosuggest menu
     {
-        "key": "ctrl+j",
-        "command": "selectNextSuggestion",
-        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible"
-    },
-    {
-        "key": "ctrl+k",
-        "command": "selectPrevSuggestion",
-        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible"
-    },
-    {
-        "key": "ctrl+j",
+        "key": "ctrl+n",
         "command": "workbench.action.quickOpenSelectNext",
         "when": "inQuickOpen"
     },
     {
-        "key": "ctrl+k",
+        "key": "ctrl+p",
         "command": "workbench.action.quickOpenSelectPrevious",
         "when": "inQuickOpen"
     },
-    // Select form quick fix menu (Ctrl + .)
+    // select form quick fix menu (Ctrl + .)
     {
-        "key": "ctrl+k",
+        "key": "ctrl+p",
         "command": "selectPrevCodeAction",
         "when": "codeActionMenuVisible"
     },
     {
-        "key": "ctrl+j",
+        "key": "ctrl+n",
         "command": "selectNextCodeAction",
         "when": "codeActionMenuVisible"
     },
-    // Moving around
+    // moving around
     {
         "key": "ctrl+h",
         "command": "workbench.action.focusLeftGroup",
@@ -76,7 +61,7 @@
         "key": "ctrl+l",
         "command": "workbench.action.navigateRight"
     },
-    // PageDown/Up when hover is open
+    // pagedown/up when hover is open
     {
         "key": "h",
         "command": "editor.action.scrollLeftHover",
@@ -97,18 +82,7 @@
         "command": "editor.action.scrollRightHover",
         "when": "editorHoverFocused"
     },
-    // Ensure that tab button works in vim.
-    {
-        "key": "tab",
-        "command": "tab",
-        "when": "editorTextFocus && !editorTabMovesFocus"
-    },
-    {
-        "key": "shift+tab",
-        "command": "outdent",
-        "when": "editorTextFocus && !editorTabMovesFocus"
-    },
-    // Navigate between open file tabs
+    // navigate between open file tabs
     {
         "key": "alt+l",
         "command": "workbench.action.nextEditor"
@@ -117,7 +91,7 @@
         "key": "alt+h",
         "command": "workbench.action.previousEditor"
     },
-    // Navigate between panels
+    // navigate between panels
     {
         "key": "alt+l",
         "command": "workbench.action.nextPanelView",
@@ -128,24 +102,24 @@
         "command": "workbench.action.previousPanelView",
         "when": "panelFocus"
     },
-    // Move active editor left or right
+    // move active editor left or right
     {
-        "key": "ctrl+alt+h",
+        "key": "shift+alt+h",
         "command": "moveActiveEditor",
         "args": { "to": "left" }
     },
     {
-        "key": "ctrl+alt+l",
+        "key": "shift+alt+l",
         "command": "moveActiveEditor",
         "args": { "to": "right" }
     },
-    // Search editor
+    // search editor
     {
         "key": "ctrl+j",
         "command": "search.focus.nextInputBox",
         "when": "inSearchEditor && inputBoxFocus || inputBoxFocus && searchViewletVisible"
     },
-    // Terminal commands.  
+    // terminal commands.  
     {
         "key": "ctrl+n",
         "command": "workbench.action.terminal.newInActiveWorkspace",
@@ -185,10 +159,6 @@
         "when": "terminalFocus"
     },
     {
-        "key": "ctrl+j",
-        "command": "-workbench.action.togglePanel"
-    },
-    {
         "key": "shift+k",
         "command": "workbench.action.terminal.scrollUpPage",
         "when": "terminalFocus"
@@ -198,7 +168,11 @@
         "command": "workbench.action.terminal.scrollDownPage",
         "when": "terminalFocus"
     },
-    // Create new file or folder in expelor
+    {
+        "key": "ctrl+j",
+        "command": "-workbench.action.togglePanel"
+    },
+    // create new file or folder in expelor
     {
         "key": "n",
         "command": "explorer.newFile",
@@ -214,7 +188,7 @@
         "command": "deleteFile",
         "when": "filesExplorerFocus && !inputFocus"
     },
-    // Change size of open tabs
+    // change size of open tabs
     {
         "key": "ctrl+left",
         "command": "workbench.action.terminal.resizePaneLeft",

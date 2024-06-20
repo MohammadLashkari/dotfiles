@@ -4,8 +4,8 @@
   "editor.scrollbar.verticalScrollbarSize": 9,
   "editor.suggest.showIcons": false,
   "editor.stickyScroll.enabled": false,
-  "editor.fontSize": 17.5, // 17
-  "window.zoomLevel": -0.3,
+  "editor.fontSize": 18, // 18
+  "window.zoomLevel": 0,
   "workbench.layoutControl.enabled": false,
   "editor.lineNumbers": "relative",
   // "editor.suggest.insertMode": "insert",
@@ -131,6 +131,7 @@
   "vim.smartcase": true,
   "vim.foldfix": true,
   "vim.highlightedyank.enable": true,
+  "vim.showmodename": false,
   // "vim.timeout": 500,
   "vim.hlsearch": true,
   "vim.visualstar": true,
@@ -151,242 +152,103 @@
     "<C-a>": false
   },
   "vim.normalModeKeyBindingsNonRecursive": [
-    // Fix undo ( ctrl+z )
-    {
-      "before": [
-        "u"
-      ],
-      "commands": [
-        "undo"
-      ]
-    },
-    {
-      "before": [
-        "<C-r>"
-      ],
-      "commands": [
-        "redo"
-      ]
-    },
-    // Cut(delete) without update register
-    {
-      "before": [
-        "<leader>",
-        "d"
-      ],
-      "after": [
-        "\"",
-        "_",
-        "d"
-      ]
-    },
-    // Cut(delete) without update register
-    {
-      "before": [
-        "<leader>",
-        "x"
-      ],
-      "after": [
-        "\"",
-        "_",
-        "x"
-      ]
-    },
     // Which key
     {
-      "before": [
-        "<leader>",
-        "<leader>"
-      ],
-      "commands": [
-        "whichkey.show"
-      ]
+      "before": [ "<leader>", "<leader>" ],
+      "commands": [ "whichkey.show" ]
     },
-    // Go to error
+    // Fix undo ( ctrl+z )
     {
-      "before": [
-        "g",
-        "e"
-      ],
-      "commands": [
-        "editor.action.marker.nextInFiles"
-      ]
+      "before": [ "u" ],
+      "commands": [ "undo" ]
     },
-    // Save file
     {
-      "before": [
-        "<leader>",
-        "s"
-      ],
-      "commands": [
-        "workbench.action.files.save"
-      ]
+      "before": [ "<c-r>" ],
+      "commands": [ "redo" ]
     },
-    // Show Hover
+    // Cut(delete) without update register
     {
-      "before": [
-        "g",
-        "h"
-      ],
-      "commands": [
-        "editor.action.showDefinitionPreviewHover"
-      ]
+      "before": [ "<leader>", "d" ],
+      "after": [ "\"", "_", "d" ]
     },
     // Move 1/2 screen down and center screen
     {
-      "before": [
-        "<c-d>"
-      ],
-      "after": [
-        "<c-d>",
-        "z",
-        "z"
-      ]
+      "before": [ "<c-d>" ],
+      "after": [ "<c-d>", "z", "z" ]
     },
     // Move 1/2 screen up and center screen
     {
-      "before": [
-        "<c-u>"
-      ],
-      "after": [
-        "<c-u>",
-        "z",
-        "z"
-      ]
+      "before": [ "<c-u>" ],
+      "after": [ "<c-u>", "z", "z" ]
+    },
+    // Go to error
+    {
+      "before": [ "d", "[" ],
+      "commands": [ "editor.action.marker.prevInFiles" ]
+    },
+    {
+      "before": [ "d", "]" ],
+      "commands": [ "editor.action.marker.nextInFiles" ]
     },
     // :nohl
     {
-      "before": [
-        "<c-n>"
-      ],
-      "commands": [
-        ":nohl"
-      ]
+      "before": [ "<esc>" ],
+      "commands": [ ":nohl" ]
     },
     // Open files
     {
-      "before": [
-        "<leader>",
-        "f"
-      ],
-      "commands": [
-        "workbench.action.quickOpen"
-      ]
+      "before": [ "<leader>", "f" ],
+      "commands": [ "workbench.action.quickOpen" ]
     },
-    // Close Window :q
+    // Open explore
     {
-      "before": [
-        "<leader>",
-        "w"
-      ],
-      "after": [
-        ":",
-        "q",
-        "<CR>"
+      "before": [ "<leader>", "e" ],
+      "commands": [
+        "activitusbar.toggleExplorerView",
+        "workbench.action.focusActiveEditorGroup"
       ]
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     // Put(paste) without updating register
     {
-      "before": [
-        "<leader>",
-        "p"
-      ],
-      "after": [
-        "\"",
-        "_",
-        "d",
-        "P"
-      ]
+      "before": [ "<leader>", "p" ],
+      "after": [ "\"", "_", "d", "P" ]
     },
     // Cut(delete) without update register
     {
-      "before": [
-        "<leader>",
-        "d"
-      ],
-      "after": [
-        "\"",
-        "_",
-        "d"
-      ]
+      "before": [ "<leader>", "d" ],
+      "after": [ "\"", "_", "d" ]
     },
     // fix $ sign problem
     {
-      "before": [
-        "$"
-      ],
-      "after": [
-        "g",
-        "_"
-      ]
+      "before": [ "$" ],
+      "after": [ "g", "_" ]
     },
     {
-      "before": [
-        "g",
-        "_"
-      ],
-      "after": [
-        "$"
-      ]
+      "before": [ "g", "_" ],
+      "after": [ "$" ]
     },
     // Move selected lines while staying in visual mode
     {
-      "before": [
-        "J"
-      ],
-      "commands": [
-        "editor.action.moveLinesDownAction"
-      ]
+      "before": [ "J" ],
+      "commands": [ "editor.action.moveLinesDownAction" ]
     },
     {
-      "before": [
-        "K"
-      ],
-      "commands": [
-        "editor.action.moveLinesUpAction"
-      ]
-    },
-    // Comment
-    {
-      "before": [
-        "/"
-      ],
-      "commands": [
-        "editor.action.commentLine"
-      ]
+      "before": [ "K" ],
+      "commands": [ "editor.action.moveLinesUpAction" ]
     }
   ],
   "vim.insertModeKeyBindings": [
     // Put semicolon to the end of line
     {
-      "before": [
-        ";",
-        ";"
-      ],
-      "after": [
-        "<Esc>",
-        "A",
-        ";",
-        "<Esc>"
-      ]
+      "before": [ ";", ";" ],
+      "after": [ "<c-o>", "A", ";" ]
     },
     // Put bracket to the end of line
     {
-      "before": [
-        "{",
-        "{"
-      ],
-      "after": [
-        "<Esc>",
-        "A",
-        "{",
-        "<Esc>",
-        "l",
-        "i",
-        "Enter"
-      ]
+      "before": [ "{", "{" ],
+      "after": [ "<Esc>", "A", "{", "<Esc>", "l", "i", "<cr>" ]
     }
   ],
   //! Which key Extention
@@ -462,5 +324,7 @@
   },
   "git.openRepositoryInParentFolders": "never",
   "workbench.colorTheme": "Default Dark+",
-  "workbench.activityBar.location": "hidden"
+  "workbench.activityBar.location": "hidden",
+  "keyboard.dispatch": "keyCode",
+  "go.toolsManagement.autoUpdate": true
 }
