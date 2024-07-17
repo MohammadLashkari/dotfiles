@@ -228,5 +228,5 @@
         "key": "ctrl+down",
         "command": "workbench.action.decreaseViewHeight",
         "when": "vim.mode == 'Normal' && editorTextFocus"
-    }
+    },
 ]

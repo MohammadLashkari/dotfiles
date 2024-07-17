@@ -1,0 +1,332 @@
+{
+  "editor.smoothScrolling": true,
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.scrollbar.verticalScrollbarSize": 9,
+  "editor.suggest.showIcons": false,
+  "editor.stickyScroll.enabled": false,
+  "editor.fontSize": 18,
+  "window.zoomLevel": 0.3,
+  "workbench.layoutControl.enabled": false,
+  "editor.lineNumbers": "relative",
+  // "editor.suggest.insertMode": "insert",
+  "editor.guides.bracketPairs": "active",
+  "workbench.tree.enableStickyScroll": false,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "breadcrumbs.enabled": false,
+  "window.commandCenter": false,
+  "editor.cursorBlinking": "expand",
+  "editor.overviewRulerBorder": false,
+  "editor.hideCursorInOverviewRuler": true,
+  "editor.minimap.enabled": false,
+  "extensions.autoUpdate": "onlyEnabledExtensions",
+  "editor.parameterHints.cycle": true,
+  "workbench.startupEditor": "none",
+  "search.searchOnType": false,
+  "window.titleBarStyle": "custom",
+  "window.title": " ",
+  "json.format.keepLines": true,
+  "explorer.compactFolders": false,
+  "debug.toolBarLocation": "docked",
+  "workbench.editor.empty.hint": "hidden",
+  "window.density.editorTabHeight": "compact",
+  "editor.renderLineHighlight": "none",
+  "search.quickOpen.includeHistory": false,
+  "scm.diffDecorations": "gutter",
+  "extensions.ignoreRecommendations": true,
+  "editor.guides.highlightActiveIndentation": false,
+  "editor.guides.highlightActiveBracketPair": false,
+  "explorer.confirmDelete": false,
+  "explorer.autoReveal": false,
+  "window.menuBarVisibility": "compact",
+  "workbench.editor.tabSizing": "shrink",
+  // error lens
+  "errorLens.messageBackgroundMode": "none",
+  "errorLens.gutterIconsEnabled": true,
+  "errorLens.gutterIconSet": "letter",
+  // Activitusbar 
+  "activitusbar.inactiveColour": "#569CD6",
+  "activitusbar.activeColour": "#569CD6",
+  "activitusbar.views": [
+    {
+      "name": "settings",
+      "codicon": "gear"
+    },
+    {
+      "name": "explorer",
+      "codicon": "explorer-view-icon"
+    },
+    {
+      "name": "search",
+      "codicon": "search-view-icon"
+    },
+    {
+      "name": "scm",
+      "codicon": "source-control-view-icon"
+    },
+    {
+      "name": "debug",
+      "codicon": "run-view-icon"
+    },
+    {
+      "name": "workbench.view.testing",
+      "codicon": "test-view-icon"
+    },
+    {
+      "name": "extensions",
+      "codicon": "extensions-view-icon"
+    },
+    {
+      "name": "command.workbench.action.terminal.toggleTerminal",
+      "codicon": "terminal"
+    }
+  ],
+  //! QuickFix/Suggestion settings
+  "editor.quickSuggestions": {
+    "comments": "off",
+    "strings": "on",
+    "other": "on"
+  },
+  "editor.wordBasedSuggestions": "off",
+  "editor.parameterHints.enabled": false,
+  "editor.tabCompletion": "off",
+  //! On save
+  "editor.codeActionsOnSave": {
+    "source.addMissingImports": "explicit",
+    "source.organizeImports": "explicit",
+    "source.fixAll": "explicit"
+  },
+  //! Code runner
+  "code-runner.runInTerminal": true,
+  //! Terminal settings
+  "terminal.integrated.fontSize": 18.5,
+  "terminal.integrated.lineHeight": 1.2,
+  "terminal.integrated.altClickMovesCursor": false,
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
+  "terminal.integrated.shellIntegration.decorationsEnabled": "never",
+  "terminal.integrated.tabs.enabled": false,
+  "terminal.integrated.allowChords": false,
+  //! Dart settings
+  "[dart]": {
+    "editor.selectionHighlight": false,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.suggestSelection": "first",
+    // show suggestons when start to type (solve enter problem)
+    "editor.suggestOnTriggerCharacters": false
+  },
+  "dart.experimentalRefactors": true,
+  //! Flutter Settings
+  // Nest files in Flutter projects
+  "dart.previewFlutterUiGuides": true,
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
+  "explorer.fileNesting.patterns": {
+    "pubspec.yaml": ".flutter-plugins, .packages, .dart_tool, .flutter-plugins-dependencies, .metadata, .packages, pubspec.lock, build.yaml, analysis_options.yaml, all_lint_rules.yaml",
+    ".gitignore": ".gitattributes, .gitmodules, .gitmessage, .mailmap, .git-blame*",
+    "readme.*": "authors, backers.md, changelog*, citation*, code_of_conduct.md, codeowners, contributing.md, contributors, copying, credits, governance.md, history.md, license*, maintainers, readme*, security.md, sponsors.md",
+    "*.dart": "$(capture).g.dart, $(capture).freezed.dart"
+  },
+  //! Golang
+  "go.toolsManagement.autoUpdate": true,
+  //! vim Settings
+  "vim.leader": "<space>",
+  "vim.smartcase": true,
+  "vim.foldfix": true,
+  "vim.highlightedyank.enable": true,
+  "vim.showmodename": false,
+  // "vim.timeout": 500,
+  "vim.hlsearch": true,
+  "vim.visualstar": true,
+  "vim.handleKeys": {
+    // VS Code search in file
+    "<C-f>": false,
+    // Copy
+    "<C-c>": false,
+    // Cut
+    "<C-x>": false,
+    // Paste
+    "<C-v>": false,
+    // Undo
+    "<C-z>": false,
+    // Redo
+    "<C-y>": false,
+    // CtrlA
+    "<C-a>": false
+  },
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // Which key
+    {
+      "before": [ "<leader>", "<leader>" ],
+      "commands": [ "whichkey.show" ]
+    },
+    // Fix undo ( ctrl+z )
+    {
+      "before": [ "u" ],
+      "commands": [ "undo" ]
+    },
+    {
+      "before": [ "<c-r>" ],
+      "commands": [ "redo" ]
+    },
+    // Cut(delete) without update register
+    {
+      "before": [ "<leader>", "d" ],
+      "after": [ "\"", "_", "d" ]
+    },
+    // Yank to the clipboard register
+    {
+      "before": [ "<leader>", "y" ],
+      "after": [ "\"", "+", "y" ]
+    },
+    {
+      "before": [ "<leader>", "Y" ],
+      "after": [ "\"", "+", "Y" ]
+    },
+    // Move 1/2 screen down and center screen
+    {
+      "before": [ "<c-d>" ],
+      "after": [ "<c-d>", "z", "z" ]
+    },
+    // Move 1/2 screen up and center screen
+    {
+      "before": [ "<c-u>" ],
+      "after": [ "<c-u>", "z", "z" ]
+    },
+    // Go to error
+    {
+      "before": [ "d", "[" ],
+      "commands": [ "editor.action.marker.prevInFiles" ]
+    },
+    {
+      "before": [ "d", "]" ],
+      "commands": [ "editor.action.marker.nextInFiles" ]
+    },
+    // :nohl
+    {
+      "before": [ "<esc>" ],
+      "commands": [ ":nohl" ]
+    },
+    // Open files
+    {
+      "before": [ "<leader>", "f" ],
+      "commands": [ "workbench.action.quickOpen" ]
+    },
+    // Open explore
+    {
+      "before": [ "<leader>", "e" ],
+      "commands": [
+        "activitusbar.toggleExplorerView",
+        "workbench.action.focusActiveEditorGroup"
+      ]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    // Put(paste) without updating register
+    {
+      "before": [ "<leader>", "p" ],
+      "after": [ "\"", "_", "d", "P" ]
+    },
+    // Cut(delete) without update register
+    {
+      "before": [ "<leader>", "d" ],
+      "after": [ "\"", "_", "d" ]
+    },
+    // Yank to the clipboard register
+    {
+      "before": [ "<leader>", "y" ],
+      "after": [ "\"", "+", "y" ]
+    },
+    // fix $ sign problem
+    {
+      "before": [ "$" ],
+      "after": [ "g", "_" ]
+    },
+    {
+      "before": [ "g", "_" ],
+      "after": [ "$" ]
+    },
+    // Move selected lines while staying in visual mode
+    {
+      "before": [ "J" ],
+      "commands": [ "editor.action.moveLinesDownAction" ]
+    },
+    {
+      "before": [ "K" ],
+      "commands": [ "editor.action.moveLinesUpAction" ]
+    },
+  ],
+  "vim.insertModeKeyBindings": [
+    // Put semicolon to the end of line
+    {
+      "before": [ ";", ";" ],
+      "after": [ "<c-o>", "A", ";" ]
+    },
+    // Put bracket to the end of line
+    {
+      "before": [ "{", "{" ],
+      "after": [ "<Esc>", "A", "{", "<Esc>", "l", "i", "<cr>" ]
+    },
+  ],
+  //! Which key Extention
+  "whichkey.bindings": [
+    {
+      "key": "c",
+      "name": "Command Pallette",
+      "type": "command",
+      "command": "workbench.action.showCommands"
+    },
+    {
+      "key": "h",
+      "name": "Hot Restart",
+      "type": "command",
+      "command": "flutter.hotRestart"
+    },
+    {
+      "key": "t",
+      "name": "Toggle Activity Bar",
+      "type": "command",
+      "command": "workbench.action.toggleActivityBarVisibility"
+    },
+    {
+      "key": "s",
+      "name": "Search Files",
+      "type": "command",
+      "command": "search.action.openNewEditorToSide"
+    },
+    {
+      "key": "r",
+      "name": "Thunder Client",
+      "type": "command",
+      "command": "workbench.view.extension.thunder-client"
+    },
+    {
+      "key": "d",
+      "name": "Open Debug",
+      "type": "command",
+      "command": "workbench.view.debug"
+    }
+  ],
+  "workbench.colorCustomizations": {
+    "[Default Dark+]": {
+      "editor.background": "#232323",
+      "statusBar.background": "#232323",
+      "statusBar.foreground": "#569CD6",
+      "statusBarItem.remoteBackground": "#232323",
+      "statusBarItem.remoteForeground": "#569CD6",
+      "sideBar.background": "#232323",
+      "activityBar.background": "#232323",
+      "titleBar.activeBackground": "#232323",
+      "editorGroupHeader.tabsBackground": "#232323",
+      "scrollbar.shadow": "#00000000",
+      "statusBar.debuggingBackground": "#232323",
+      "sideBar.border": "#3e3e42",
+      "sideBarTitle.foreground": "#00000000"
+    },
+  },
+  "git.openRepositoryInParentFolders": "never",
+  "workbench.colorTheme": "Default Dark+",
+  "keyboard.dispatch": "keyCode",
+  "workbench.activityBar.location": "hidden",
+}

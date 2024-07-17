@@ -1,7 +1,12 @@
-# Configs
+# dotfiles 
 
-- vscode settings
-- vscode keybindings
-- .vimrc
+- nvim
+- sway and waybar
+- tmux
+- alacritty
+- .zshrc
 - .inputrc
+- .vimrc
+- .gitconf
+- vscode settings
 
