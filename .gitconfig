@@ -1,0 +1,11 @@
+[user]
+	name = MohammadLashkari
+	email = moe.lashkari@gmail.com
+[pull]
+    rebase = true
+[core]
+	editor = nvim
+[alias]
+	dog = log --all --decorate --oneline --graph
+[credential]
+	helper = store

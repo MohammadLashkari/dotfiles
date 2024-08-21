@@ -28,6 +28,7 @@ zinit ice depth=1; zinit light romkatv/powerlevel10k
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
+fpath=(~/.docker/completions \\$fpath)
 
 # Load completions
 autoload -Uz compinit && compinit
@@ -57,14 +58,13 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 
 # Aliases
 alias ls='ls --color'
-alias vpn='cd ~/Downloads/software/nekoray && ./nekoray &'
 alias obsidian="xdg-open 'obsidian://open?vault=lsk'"
 
 # ENV
+EDITOR=/usr/bin/nvim
 PATH=$PATH:/usr/local/go/bin
 PATH=$PATH:$HOME/go/bin
-export GREENLIGHT_DB_DSN='postgres://greenlight:password@localhost/greenlight?sslmode=disable'
-export FZF_DEFAULT_OPTS='--height 70% --reverse'
+export FZF_DEFAULT_OPTS='--reverse'
 
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
