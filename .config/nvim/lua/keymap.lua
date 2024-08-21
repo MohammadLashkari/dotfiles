@@ -17,9 +17,6 @@ vim.keymap.set('n', '<c-d>', '<c-d>zz')
 vim.keymap.set('n', '<leader>s', [[:%s/<c-r><c-w>//gI<left><left><left>]])
 vim.keymap.set('v', '<leader>s', [[o:s/<c-r><c-w>//gI<left><left><left>]])
 
-vim.keymap.set('n', '<esc>', '<cmd>nohlsearch<cr>')
-vim.keymap.set('i', '{{', '<esc>A{<esc>o}<esc>O')
-
 vim.keymap.set('n', '<c-right>', '<c-w>5>')
 vim.keymap.set('n', '<c-left>', '<c-w>5<')
 vim.keymap.set('n', '<c-up>', '<c-w>5+')

@@ -10,7 +10,9 @@ return {
     config = function()
         require('mason').setup()
         require('mason-lspconfig').setup({
-            ensure_installed = { 'lua_ls', 'gopls', 'html', 'cssls', 'templ', 'htmx' },
+            ensure_installed = {
+                'lua_ls', 'gopls', 'html', 'cssls', 'templ', 'htmx', 'texlab',
+            },
         })
 
         local lspconfig = require('lspconfig')
@@ -57,6 +59,7 @@ return {
         lspconfig.html.setup({
             filetypes = { "html", "templ" },
         })
+        -- lspconfig.bufls.setup {}
         -- lspconfig.htmx.setup({
         --     filetypes = { "html", "templ" },
         -- })

@@ -15,13 +15,17 @@ vim.opt.splitright = true
 
 vim.opt.smartcase = true
 vim.opt.ignorecase = true
+vim.opt.hlsearch = false
 
-vim.opt.updatetime = 350
-vim.opt.timeoutlen = 350
+vim.opt.updatetime = 400
+vim.opt.timeoutlen = 400
 
-vim.opt.scrolloff = 8
-vim.opt.mouse = 'a'
 vim.opt.wrap = false
+-- vim.opt.linebreak = true
+-- vim.opt.showbreak = '->'
+
+vim.opt.scrolloff = 13
+vim.opt.mouse = 'a'
 vim.opt.signcolumn = 'yes'
 vim.opt.inccommand = 'split'
 vim.opt.termguicolors = true

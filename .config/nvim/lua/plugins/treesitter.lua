@@ -4,11 +4,12 @@ return {
     config = function()
         require('nvim-treesitter.configs').setup({
             ensure_installed = {
-                'c', 'bash', 'go', 'lua', 'dart', 'python', 'html', 'json', 'yaml', 'markdown', 'vimdoc', 'templ',
+                'c', 'bash', 'go', 'lua', 'markdown', 'vimdoc',
             },
             auto_install = true,
             highlight = {
                 enable = true,
+                disable = { "latex" },
             },
             indent = {
                 enable = true,

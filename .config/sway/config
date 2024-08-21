@@ -23,7 +23,7 @@ set $menu dmenu_path | wmenu | xargs swaymsg exec --
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-# output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+output * bg /home/lsk/Pictures/wallpaper/duck-minimal-dark.jpg fill
 #
 # Example configuration:
 #
@@ -221,6 +221,10 @@ input "type:touchpad" {
     natural_scroll enabled
     middle_emulation enabled
 }
+# network manager applet
+exec_always nm-applet --indicator
+# swaylock
+bindsym $mod+Backspace exec swaylock -f -c 000000
 # brightness
 bindsym XF86MonBrightnessUp exec "brightnessctl set +10%"
 bindsym XF86MonBrightnessDown exec "brightnessctl set 10%-"
@@ -234,7 +238,6 @@ exec_always copyq
 for_window [app_id="copyq"] floating enable, sticky enable, resize set height 500px width 500px, move position cursor, move down 330
 bindsym Mod4+v exec copyq toggle
 # scrennshot
-bindsym Print exec grim ~/Pictures/screenshot/$(date +%Y-%m-%d_%H-%M-%S).png
-bindsym Print+S exec grim -g "$(slurp)" ~/Pictures/screenshot/$(date +%Y-%m-%d_%H-%M-%S).png
-bindsym Print+E exec grim -g "$(slurp)" - | swappy -f - -o ~/Pictures/screenshot/$(date +%Y-%m-%d_%H-%M-%S).png
-
+bindsym Print+1 exec grim ~/Pictures/screenshot/$(date +%Y-%m-%d_%H-%M-%S).png
+bindsym Print+2 exec grim -g "$(slurp)" ~/Pictures/screenshot/$(date +%Y-%m-%d_%H-%M-%S).png
+bindsym Print+3 exec grim -g "$(slurp)" - | swappy -f - -o ~/Pictures/screenshot/$(date +%Y-%m-%d_%H-%M-%S).png

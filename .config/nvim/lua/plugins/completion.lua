@@ -36,12 +36,12 @@ return {
                 { name = "path" },
             },
             mapping = {
-                ["<c-n>"] = cmp.mapping.select_next_item { behavior = cmp.SelectBehavior.Select },
-                ["<c-p>"] = cmp.mapping.select_prev_item { behavior = cmp.SelectBehavior.Select },
+                ["<c-n>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Select }),
+                ["<c-p>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Select }),
                 ["<c-u>"] = cmp.mapping.scroll_docs(-4),
                 ["<c-d>"] = cmp.mapping.scroll_docs(4),
                 ["<c-e>"] = cmp.mapping.close(),
-                ["<cr>"] = cmp.mapping.confirm { select = true },
+                ["<cr>"] = cmp.mapping.confirm({ select = true }),
                 ["<c-space>"] =
                     function()
                         if cmp.visible() then
