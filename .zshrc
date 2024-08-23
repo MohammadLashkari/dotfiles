@@ -31,7 +31,8 @@ zinit light zsh-users/zsh-autosuggestions
 fpath=(~/.docker/completions \\$fpath)
 
 # Load completions
-autoload -Uz compinit && compinit
+autoload -Uz +X compinit && compinit
+autoload -Uz +X bashcompinit && bashcompinit
 
 # Keybindings
 bindkey -v '^?' backward-delete-char
