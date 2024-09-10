@@ -3,21 +3,52 @@ return {
         'nvim-tree/nvim-web-devicons',
     },
     {
-        'sainnhe/gruvbox-material',
+        "rebelot/kanagawa.nvim",
         lazy = false,
         priority = 1000,
         config = function()
-            vim.g.gruvbox_material_better_performance = 1
-            vim.g.gruvbox_material_transparent_background = 1
-            vim.g.gruvbox_material_float_style = "dim"
-            vim.g.gruvbox_material_diagnostic_virtual_text = "colored"
-            vim.cmd.colorscheme('gruvbox-material')
+            require("kanagawa").setup({
+                transparent = true,
+                keywordStyle = { italic = false },
+                statementStyle = { bold = false },
+                colors = {
+                    theme = {
+                        all = {
+                            ui = {
+                                bg_gutter = "none",
+                            },
+                        }
+                    }
+                },
+                overrides = function(colors)
+                    local theme = colors.theme
+                    return {
+                        Boolean = { bold = false },
+                        WinSeparator = { fg = theme.ui.nontext },
+                        NormalFloat = { bg = "none" },
+                        FloatBorder = { bg = "none" },
+                        FloatTitle = { bg = "none" },
+                        NormalDark = { fg = theme.ui.fg_dim, bg = theme.ui.bg_m3 },
+                        LazyNormal = { bg = theme.ui.bg_m3, fg = theme.ui.fg_dim },
+                        MasonNormal = { bg = theme.ui.bg_m3, fg = theme.ui.fg_dim },
+                    }
+                end,
+            })
+            vim.cmd.colorscheme("kanagawa-dragon")
+            vim.cmd("highlight TelescopeBorder guibg=none")
         end
     }
-}
 
--- rebelot/kanagawa.nvim
--- catppuccin/nvim
--- rose-pine/neovim
--- marko-cerovac/material.nvim
--- sainnhe/gruvbox-material
+    -- {
+    --     'sainnhe/gruvbox-material',
+    --     lazy = false,
+    --     priority = 1000,
+    --     config = function()
+    --         vim.g.gruvbox_material_better_performance = 1
+    --         vim.g.gruvbox_material_transparent_background = 1
+    --         vim.g.gruvbox_material_float_style = "dim"
+    --         vim.g.gruvbox_material_diagnostic_virtual_text = "colored"
+    --         vim.cmd.colorscheme('gruvbox-material')
+    --     end
+    -- }
+}

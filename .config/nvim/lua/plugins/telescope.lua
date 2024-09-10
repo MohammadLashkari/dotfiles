@@ -14,6 +14,8 @@ return {
         vim.keymap.set('n', '<leader>fd', builtin.diagnostics)
         vim.keymap.set('n', '<leader>fc', builtin.git_commits)
         vim.keymap.set('n', '<leader>fs', builtin.lsp_document_symbols)
+        vim.keymap.set('n', '<leader>fr', builtin.lsp_references)
+        vim.keymap.set('n', '<leader>fi', builtin.lsp_implementations)
         vim.keymap.set('n', '<leader>/', builtin.current_buffer_fuzzy_find)
     end
 }

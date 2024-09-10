@@ -4,15 +4,14 @@ return {
         require('lualine').setup {
             options = {
                 globalstatus = true,
-                theme = "codedark",
                 icons_enabled = false,
                 component_separators = '|',
             },
             sections = {
                 lualine_a = {},
                 lualine_b = {},
-                lualine_c = { 'mode', 'filename', 'branch', 'diagnostics' },
-                lualine_x = { 'diff', 'filetype', 'progress' },
+                lualine_c = { 'mode', { 'filename', path = 1 }, 'branch', 'diagnostics' },
+                lualine_x = { 'diff', 'progress' },
                 lualine_y = {},
                 lualine_z = {},
             }

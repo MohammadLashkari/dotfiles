@@ -4,11 +4,11 @@ return {
     event = 'VeryLazy',
     config = function()
         local harpoon = require('harpoon')
-        -- harpoon:setup({
-        --     settings = {
-        --         save_on_toggle = true,
-        --     }
-        -- })
+        harpoon:setup({
+            settings = {
+                save_on_toggle = true,
+            }
+        })
         vim.keymap.set('n', '<leader>m', function() harpoon:list():add() end)
         vim.keymap.set('n', '<leader>h', function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
         for _, idx in ipairs { 1, 2, 3, 4, 5 } do

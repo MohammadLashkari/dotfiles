@@ -59,6 +59,7 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 
 # Aliases
 alias ls='ls --color'
+alias vim='nvim'
 alias obsidian="xdg-open 'obsidian://open?vault=lsk'"
 
 # ENV

@@ -224,7 +224,7 @@ input "type:touchpad" {
 # network manager applet
 exec_always nm-applet --indicator
 # swaylock
-bindsym $mod+Backspace exec swaylock -f -c 000000
+bindsym $mod+Backspace exec swaylock -f -c 000000 --indicator-idle-visible --indicator-caps-lock
 # brightness
 bindsym XF86MonBrightnessUp exec "brightnessctl set +10%"
 bindsym XF86MonBrightnessDown exec "brightnessctl set 10%-"

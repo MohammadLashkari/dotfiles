@@ -11,7 +11,7 @@ return {
         require('mason').setup()
         require('mason-lspconfig').setup({
             ensure_installed = {
-                'lua_ls', 'gopls', 'html', 'cssls', 'templ', 'htmx', 'texlab',
+                'lua_ls', 'gopls',
             },
         })
 
@@ -25,6 +25,7 @@ return {
                 vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
                 vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
                 vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
+                vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
                 vim.keymap.set('n', '<leader>=', vim.lsp.buf.format, opts)
                 vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, opts)
                 vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, opts)
@@ -56,13 +57,6 @@ return {
                 },
             },
         })
-        lspconfig.html.setup({
-            filetypes = { "html", "templ" },
-        })
-        -- lspconfig.bufls.setup {}
-        -- lspconfig.htmx.setup({
-        --     filetypes = { "html", "templ" },
-        -- })
 
         -- Globally configure all LSP floating preview popups (like hover, signature help, etc)
         local open_floating_preview = vim.lsp.util.open_floating_preview

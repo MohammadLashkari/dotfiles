@@ -9,11 +9,9 @@ set colored-completion-prefix on
 set colored-stats on
 set visible-stats on
 set bell-style none
-
 "\t": menu-complete
 "\e[Z": menu-complete-backward
 
 set keymap vi-command
 "k": history-search-backward
 "j": history-search-forward
-

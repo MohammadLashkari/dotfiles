@@ -4,7 +4,7 @@
 TERM = "xterm-256color"
 
 [font]
-size = 13.3
+size = 12
 
 [window]
 padding.x = 5
