@@ -19,9 +19,13 @@ return {
                 git_status = {
                     symbols = false,
                 },
+                symlink_target = {
+                    enabled = true,
+                },
             },
             filesystem = {
                 hijack_netrw_behavior = "open_current",
+                show_symlinks = true,
                 follow_current_file = {
                     enabled = true,
                 },
