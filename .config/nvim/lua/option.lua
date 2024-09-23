@@ -15,7 +15,6 @@ vim.opt.splitright = true
 
 vim.opt.smartcase = true
 vim.opt.ignorecase = true
-vim.opt.hlsearch = false
 
 vim.opt.updatetime = 400
 vim.opt.timeoutlen = 400
@@ -31,6 +30,4 @@ vim.opt.termguicolors = true
 vim.opt.showmode = false
 vim.opt.clipboard:append("unnamedplus")
 vim.opt.formatoptions:remove 'o'
-vim.opt.completeopt = { "menu", "menuone", "noselect" }
--- vim.opt.autochdir = true
 -- vim.opt.termbidi = true
