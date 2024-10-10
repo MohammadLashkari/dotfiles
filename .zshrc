@@ -36,8 +36,8 @@ autoload -Uz +X bashcompinit && bashcompinit
 
 # Keybindings
 bindkey -v '^?' backward-delete-char
-bindkey -M vicmd 'k' history-search-backward
-bindkey -M vicmd 'j' history-search-forward
+bindkey '^p' history-search-backward
+bindkey '^n' history-search-forward
 
 # History
 HISTSIZE=5000
