@@ -1,4 +1,3 @@
-// -*- mode: jsonc -*-
 {
     //"layer": "top", // Waybar at top layer
     //"position": "bottom", // Waybar position (top|bottom|left|right)
@@ -25,8 +24,8 @@
         // "power-profiles-daemon",
         // "temperature",
         //"backlight",
-        //"custom/separator",
-        //"bluetooth",
+        "custom/separator",
+        "bluetooth",
         "custom/separator",
         "cpu",
         "custom/separator",
@@ -45,7 +44,7 @@
     //    "format": "<span style=\"italic\">{}</span>"
     //},
     "bluetooth": {
-        "format": "{status} "
+        "format": " {status}  "
     },
     "cpu": {
         "format": "CPU {}%"
