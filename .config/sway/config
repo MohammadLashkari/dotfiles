@@ -242,3 +242,7 @@ bindsym Print+1 exec grim ~/Pictures/screenshot/$(date +%Y-%m-%d_%H-%M-%S).png
 bindsym Print+2 exec grim -g "$(slurp)" ~/Pictures/screenshot/$(date +%Y-%m-%d_%H-%M-%S).png
 bindsym Print+3 exec grim -g "$(slurp)" - | tee ~/Pictures/screenshot/$(date +%Y-%m-%d_%H-%M-%S).png | wl-copy
 bindsym Print+4 exec grim -g "$(slurp)" - | swappy -f - -o ~/Pictures/screenshot/$(date +%Y-%m-%d_%H-%M-%S).png
+# notification
+exec swaync
+bindsym $mod+Shift+n exec swaync-client -t -sw
+
