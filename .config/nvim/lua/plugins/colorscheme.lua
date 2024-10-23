@@ -8,7 +8,6 @@ return {
         priority = 1000,
         config = function()
             require("kanagawa").setup({
-                transparent = true,
                 keywordStyle = { italic = false },
                 statementStyle = { bold = false },
                 colors = {
@@ -31,11 +30,11 @@ return {
                         NormalDark = { fg = theme.ui.fg_dim, bg = theme.ui.bg_m3 },
                         LazyNormal = { bg = theme.ui.bg_m3, fg = theme.ui.fg_dim },
                         MasonNormal = { bg = theme.ui.bg_m3, fg = theme.ui.fg_dim },
+                        TelescopeBorder = { bg = "none" },
                     }
                 end,
             })
             vim.cmd.colorscheme("kanagawa-dragon")
-            vim.cmd("highlight TelescopeBorder guibg=none")
         end
     }
 
