@@ -28,7 +28,6 @@ zinit ice depth=1; zinit light romkatv/powerlevel10k
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
-fpath=(~/.docker/completions \\$fpath)
 
 # Load completions
 autoload -Uz +X compinit && compinit
@@ -38,6 +37,7 @@ autoload -Uz +X bashcompinit && bashcompinit
 bindkey -v '^?' backward-delete-char
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
+bindkey -s '^f' 'tmux-sessionizer\n'
 
 # History
 HISTSIZE=5000
@@ -60,14 +60,15 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 # Aliases
 alias ls='ls --color'
 alias vim='nvim'
-alias obsidian="xdg-open 'obsidian://open?vault=lsk'"
+alias k='kubectl'
 
 # ENV
 EDITOR=/usr/bin/nvim
+PATH=$PATH:$HOME/.local/bin
+GOPATH=$HOME/go
+PATH=$PATH:$GOPATH/bin
 PATH=$PATH:/usr/local/go/bin
-PATH=$PATH:$HOME/go/bin
-export FZF_DEFAULT_OPTS='--reverse'
-
 # FZF
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_OPTS='--reverse'
+source <(fzf --zsh)
 
