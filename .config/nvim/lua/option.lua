@@ -10,9 +10,6 @@ vim.opt.smartindent = true
 vim.opt.swapfile = false
 vim.opt.undofile = true
 
-vim.opt.splitbelow = true
-vim.opt.splitright = true
-
 vim.opt.smartcase = true
 vim.opt.ignorecase = true
 
@@ -20,7 +17,6 @@ vim.opt.updatetime = 400
 vim.opt.timeoutlen = 400
 
 vim.opt.spell = true
-
 vim.opt.wrap = false
 vim.opt.scrolloff = 13
 vim.opt.mouse = "a"
