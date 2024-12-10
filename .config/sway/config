@@ -209,6 +209,7 @@ include /etc/sway/config.d/*
 
 ### custom
 default_border pixel 2
+hide_edge_borders smart
 # keyboard
 input "type:keyboard" {
     xkb_options caps:swapescape,grp:win_space_toggle
