@@ -16,14 +16,12 @@ set $right l
 # Your preferred terminal emulator
 set $term alacritty
 # Your preferred application launcher
-# Note: pass the final command to swaymsg so that the resulting window can be opened
-# on the original workspace that the command was run on.
-set $menu dmenu_path | wmenu | xargs swaymsg exec --
+set $menu wofi --show run
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /home/lsk/Pictures/wallpaper/duck-minimal-dark.jpg fill
+output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 #
 # Example configuration:
 #
@@ -195,55 +193,59 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"
+#
+# Utilities:
+#
+    # Special keys to adjust volume via PulseAudio
+    bindsym --locked XF86AudioMute exec pactl set-sink-mute \@DEFAULT_SINK@ toggle
+    bindsym --locked XF86AudioLowerVolume exec pactl set-sink-volume \@DEFAULT_SINK@ -5%
+    bindsym --locked XF86AudioRaiseVolume exec pactl set-sink-volume \@DEFAULT_SINK@ +5%
+    bindsym --locked XF86AudioMicMute exec pactl set-source-mute \@DEFAULT_SOURCE@ toggle
+    # Special keys to adjust brightness via brightnessctl
+    bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
+    bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
+    # Special key to take a screenshot with grim
+    bindsym Print+1 exec grim ~/Pictures/screenshot/$(date +%Y-%m-%d_%H-%M-%S).png
+    bindsym Print+2 exec grim -g "$(slurp)" ~/Pictures/screenshot/$(date +%Y-%m-%d_%H-%M-%S).png
+    bindsym Print+3 exec grim -g "$(slurp)" - | tee ~/Pictures/screenshot/$(date +%Y-%m-%d_%H-%M-%S).png | wl-copy
+    bindsym Print+4 exec grim -g "$(slurp)" - | swappy -f - -o ~/Pictures/screenshot/$(date +%Y-%m-%d_%H-%M-%S).png
 
 #
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar {
+    position top
     swaybar_command waybar
 }
 
 include /etc/sway/config.d/*
 
 
-### custom
-default_border pixel 2
+# ------------ Custom
 hide_edge_borders smart
-# keyboard
+default_border pixel 2
+bindsym $mod+Tab workspace back_and_forth
+# Keyboard
 input "type:keyboard" {
     xkb_options caps:swapescape,grp:win_space_toggle
     xkb_layout us,ir
 }
-# touchpad
+# Touchpad
 input "type:touchpad" {
     dwt enabled
     tap enabled
     natural_scroll enabled
     middle_emulation enabled
 }
-# network manager applet
-exec_always nm-applet --indicator
-# swaylock
+# Network
+exec nm-applet --indicator
+# Sway lock
 bindsym $mod+Backspace exec swaylock -f -c 000000 --indicator-idle-visible --indicator-caps-lock
-# brightness
-bindsym XF86MonBrightnessUp exec "brightnessctl set +10%"
-bindsym XF86MonBrightnessDown exec "brightnessctl set 10%-"
-# volume
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +10%
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -10%
-bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
-bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
-# clipboard
-exec_always copyq
-for_window [app_id="copyq"] floating enable, sticky enable, resize set height 500px width 500px, move position cursor, move down 330
-bindsym Mod4+v exec copyq toggle
-# scrennshot
-bindsym Print+1 exec grim ~/Pictures/screenshot/$(date +%Y-%m-%d_%H-%M-%S).png
-bindsym Print+2 exec grim -g "$(slurp)" ~/Pictures/screenshot/$(date +%Y-%m-%d_%H-%M-%S).png
-bindsym Print+3 exec grim -g "$(slurp)" - | tee ~/Pictures/screenshot/$(date +%Y-%m-%d_%H-%M-%S).png | wl-copy
-bindsym Print+4 exec grim -g "$(slurp)" - | swappy -f - -o ~/Pictures/screenshot/$(date +%Y-%m-%d_%H-%M-%S).png
-# notification
+# Notification
 exec swaync
 bindsym $mod+Shift+n exec swaync-client -t -sw
-
+# Clipboard
+exec copyq --start-server
+for_window [app_id="copyq"] floating enable, resize set height 500px width 500px, move position cursor, move down 330
+bindsym Mod4+v exec copyq toggle
