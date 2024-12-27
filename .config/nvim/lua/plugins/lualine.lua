@@ -3,6 +3,7 @@ return {
     config = function()
         require('lualine').setup {
             options = {
+                theme = 'iceberg_dark',
                 globalstatus = true,
                 icons_enabled = false,
                 component_separators = '|',
