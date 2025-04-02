@@ -1,7 +1,5 @@
 vim.g.mapleader = ' '
 
-vim.keymap.set("n", "<c-f>", "<cmd>silent !tmux neww tmux-sessionizer<cr>")
-
 vim.keymap.set({ 'n', 'v' }, '<leader>d', [["_d]])
 vim.keymap.set('v', '<leader>p', [["_dp]])
 
