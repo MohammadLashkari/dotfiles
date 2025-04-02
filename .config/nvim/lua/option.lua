@@ -26,4 +26,5 @@ vim.opt.termguicolors = true
 vim.opt.showmode = false
 vim.opt.clipboard:append("unnamedplus")
 vim.opt.formatoptions:remove 'o'
+vim.opt.winborder = "single"
 -- vim.opt.termbidi = true
