@@ -1,12 +1,12 @@
 # dotfiles 
 
 - nvim
-- sway and waybar
 - tmux
 - alacritty
+- sway 
+- waybar 
 - .zshrc
 - .inputrc
 - .vimrc
-- .gitconf
-- vscode settings
+- .gitconfig
 

@@ -1,51 +1,69 @@
 return {
-    {
-        'nvim-tree/nvim-web-devicons',
-    },
-    {
-        "vague2k/vague.nvim",
-        config = function()
-            require("vague").setup({
-                transparent = true,
-            })
-            vim.cmd.colorscheme("vague")
-        end
-    }
+	{
+		"nvim-tree/nvim-web-devicons",
+	},
+	-- {
+	-- 	"EdenEast/nightfox.nvim",
+	-- 	lazy = false,
+	-- 	priority = 1000,
+	-- 	config = function()
+	-- 		require("nightfox").setup({
+	-- 			options = {
+	-- 				transparent = true,
+	-- 			},
+	-- 		})
+	-- 		vim.cmd.colorscheme("nightfox")
+	-- 		vim.api.nvim_set_hl(0, "WinSeparator", { fg = "#888888", bg = "none" })
+	-- 	end,
+	-- },
+	{
+		"webhooked/kanso.nvim",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			require("kanso").setup({
+				transparent = true,
+				disableItalics = true,
+				overrides = function(colors)
+					local theme = colors.theme
+					return {
+						WinSeparator = { fg = theme.ui.nontext },
+					}
+				end,
+			})
+			vim.cmd.colorscheme("kanso-zen")
+		end,
+	},
+	-- {
+	-- 	"rebelot/kanagawa.nvim",
+	-- 	lazy = false,
+	-- 	priority = 1000,
+	-- 	config = function()
+	-- 		require("kanagawa").setup({
+	-- 			transparent = true,
+	-- 			keywordStyle = { italic = false },
+	-- 			statementStyle = { bold = false },
+	-- 			colors = {
+	-- 				theme = {
+	-- 					all = {
+	-- 						ui = {
+	-- 							bg_gutter = "none",
+	-- 						},
+	-- 					},
+	-- 				},
+	-- 			},
+	-- 			overrides = function(colors)
+	-- 				local theme = colors.theme
+	-- 				return {
+	-- 					Boolean = { bold = false },
+	-- 					WinSeparator = { fg = theme.ui.nontext },
+	-- 					NormalFloat = { bg = "none" },
+	-- 					FloatBorder = { bg = "none" },
+	-- 					NormalDark = { fg = theme.ui.fg_dim, bg = theme.ui.bg_m3 },
+	-- 				}
+	-- 			end,
+	-- 		})
+	-- 		vim.cmd.colorscheme("kanagawa-dragon")
+	-- 	end,
+	-- },
 }
--- {
---     "EdenEast/nightfox.nvim",
---     lazy = false,
---     priority = 1000,
---     config = function()
---         require("nightfox").setup({
---             options = {
---                 transparent = true,
---             },
---         })
---         vim.cmd.colorscheme("carbonfox")
---     end
--- }
--- }
---     {
---         "rebelot/kanagawa.nvim",
---         lazy = false,
---         priority = 1000,
---         config = function()
---             require("kanagawa").setup({
---                 transparent = true,
---                 keywordStyle = { italic = false },
---                 statementStyle = { bold = false },
---                 colors = {
---                     theme = {
---                         all = {
---                             ui = {
---                                 bg_gutter = "none",
---                             },
---                         }
---                     }
---                 },
---             })
---             vim.cmd.colorscheme("kanagawa-dragon")
---         end
---     }
--- }

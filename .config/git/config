@@ -5,5 +5,8 @@
 	editor = nvim
 [alias]
 	dog = log --all --decorate --oneline --graph --abbrev-commit --format=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset'
-[credential]
-	helper = store
+[status]
+    showStash = true
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
+

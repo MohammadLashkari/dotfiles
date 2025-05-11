@@ -22,9 +22,6 @@ set wildoptions=tagfile
 
 set completeopt=menuone,noselect
 
-set breakindent
-set showbreak=-->
-
 set timeoutlen=300
 set updatetime=300
 
@@ -34,9 +31,6 @@ set hidden
 set novisualbell
 set noshowmode
 
-
-" set termguicolors
-" set shortmess+=c
 
 " cursor	           	
 let &t_SI = "\e[5 q"
@@ -55,13 +49,8 @@ vnoremap K :m '<-2<cr>gv=gv
 
 nnoremap <leader>s :%s/<c-r><c-w>//gI<left><left><left>
 
-nnoremap <leader>w :w<cr>
-nnoremap <leader>q :q<cr>
-
 nnoremap <c-d> <c-d>zz
 nnoremap <c-u> <c-u>zz
-
-inoremap ;; <c-o>A;
 
 nnoremap <cr> :noh<cr><cr>
 
@@ -69,8 +58,4 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
-
-" status line
-set statusline=
-set statusline+=\ %M
 

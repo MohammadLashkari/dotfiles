@@ -18,13 +18,13 @@ vim.opt.timeoutlen = 400
 
 vim.opt.spell = true
 vim.opt.wrap = false
-vim.opt.scrolloff = 13
+vim.opt.scrolloff = 10
 vim.opt.mouse = "a"
 vim.opt.signcolumn = "yes"
 vim.opt.inccommand = "split"
 vim.opt.termguicolors = true
 vim.opt.showmode = false
 vim.opt.clipboard:append("unnamedplus")
-vim.opt.formatoptions:remove 'o'
+vim.opt.formatoptions:remove("o")
+vim.diagnostic.config({ virtual_text = { true } })
 vim.opt.winborder = "single"
--- vim.opt.termbidi = true
