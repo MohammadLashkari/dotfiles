@@ -18,11 +18,14 @@ zinit light zsh-users/zsh-autosuggestions
 # Load completions
 autoload -Uz +X compinit && compinit
 autoload -Uz +X bashcompinit && bashcompinit
+autoload -Uz edit-command-line
 
 # Keybindings
 bindkey -v '^?' backward-delete-char
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
+zle -N edit-command-line
+bindkey '^X^E' edit-command-line
 bindkey -s '^f' ' tmux-sessionizer\n'
 
 # History
