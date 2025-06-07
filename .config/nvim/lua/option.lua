@@ -27,4 +27,3 @@ vim.opt.showmode = false
 vim.opt.clipboard:append("unnamedplus")
 vim.opt.formatoptions:remove("o")
 vim.diagnostic.config({ virtual_text = { true } })
-vim.opt.winborder = "single"
