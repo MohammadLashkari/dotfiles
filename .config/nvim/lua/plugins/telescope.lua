@@ -7,6 +7,14 @@ return {
 	},
 	config = function()
 		require("telescope").setup({
+			defaults = {
+				mappings = {
+					i = {
+						["<C-Down>"] = require("telescope.actions").cycle_history_next,
+						["<C-Up>"] = require("telescope.actions").cycle_history_prev,
+					},
+				},
+			},
 			extensions = {
 				fzf = {},
 				aerial = {},
