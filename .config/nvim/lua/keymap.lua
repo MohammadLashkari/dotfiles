@@ -1,7 +1,6 @@
 vim.g.mapleader = " "
 
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
-vim.keymap.set("v", "<leader>p", [["_dp]])
 
 vim.keymap.set("v", "J", ":m '>+1<cr>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<cr>gv=gv")
