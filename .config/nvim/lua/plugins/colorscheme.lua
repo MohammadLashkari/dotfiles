@@ -3,6 +3,19 @@ return {
 		"nvim-tree/nvim-web-devicons",
 	},
 	-- {
+	-- 	"bluz71/vim-moonfly-colors",
+	-- 	name = "moonfly",
+	-- 	lazy = false,
+	-- 	priority = 1000,
+	-- 	config = function()
+	-- 		vim.g.moonflyTransparent = true
+	-- 		vim.g.moonflyItalics = false
+	-- 		vim.g.moonflyWinSeparator = 2
+	-- 		vim.g.moonflyVirtualTextColor = true
+	-- 		vim.cmd("colorscheme moonfly")
+	-- 	end,
+	-- },
+	-- {
 	-- 	"EdenEast/nightfox.nvim",
 	-- 	lazy = false,
 	-- 	priority = 1000,
