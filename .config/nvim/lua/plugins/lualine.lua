@@ -17,7 +17,7 @@ return {
 					"diff",
 					"diagnostics",
 				},
-				lualine_x = { "aerial", "progress" },
+				lualine_x = { "progress" },
 				lualine_y = {},
 				lualine_z = {},
 			},

@@ -17,11 +17,9 @@ return {
 			},
 			extensions = {
 				fzf = {},
-				aerial = {},
 			},
 		})
 		require("telescope").load_extension("fzf")
-		require("telescope").load_extension("aerial")
 		vim.keymap.set("n", "<leader>f", require("telescope.builtin").find_files)
 		vim.keymap.set("n", "<leader>fw", require("telescope.builtin").grep_string)
 		vim.keymap.set("n", "<leader>fg", require("telescope.builtin").live_grep)
@@ -34,7 +32,6 @@ return {
 		vim.keymap.set("n", "<leader>fh", require("telescope.builtin").help_tags)
 		vim.keymap.set("n", "<leader>ft", require("telescope.builtin").treesitter)
 		vim.keymap.set("n", "<leader>fp", require("telescope.builtin").resume)
-		vim.keymap.set("n", "<leader>fa", "<cmd>Telescope aerial<cr>")
 		vim.keymap.set("n", "<leader>/", require("telescope.builtin").current_buffer_fuzzy_find)
 	end,
 }
