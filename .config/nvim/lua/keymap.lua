@@ -8,8 +8,8 @@ vim.keymap.set("v", "K", ":m '<-2<cr>gv=gv")
 vim.keymap.set("n", "<c-d>", "<c-d>zz")
 vim.keymap.set("n", "<c-u>", "<c-u>zz")
 
-vim.keymap.set("n", "<leader>s", [[:%s///gc<left><left><left><left>]])
-vim.keymap.set("v", "<leader>s", [[:s///gc<left><left><left><left>]])
+vim.keymap.set("n", "<leader>s", [[:%s//gc<left><left><left>]])
+vim.keymap.set("v", "<leader>s", [[:s//gc<left><left><left>]])
 
 vim.keymap.set("n", "<esc>", "<cmd>nohlsearch<cr>")
 
